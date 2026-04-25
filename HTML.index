@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perth Cleaning Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green:#2E7D32; --green-light:#4CAF50; --green-pale:#E8F5E9;
+    --green-mid:#A5D6A7; --white:#fff; --off-white:#F9FBF9;
+    --dark:#1B2B1C; --gray:#6B7C6C; --gray-light:#f0f4f0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--dark);overflow-x:hidden;}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid #e0ede0;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;cursor:pointer;}
+  .logo-icon{width:44px;height:44px;background:var(--green);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;}
+  .logo-text{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--dark);line-height:1.1;}
+  .logo-text span{color:var(--green);}
+  nav ul{list-style:none;display:flex;gap:28px;align-items:center;}
+  nav ul li a{text-decoration:none;color:var(--gray);font-size:.88rem;font-weight:500;transition:color .2s;cursor:pointer;padding:4px 0;border-bottom:2px solid transparent;}
+  nav ul li a:hover,nav ul li a.active{color:var(--green);border-bottom-color:var(--green);}
+  .nav-cta{background:var(--green)!important;color:white!important;padding:9px 20px;border-radius:8px;font-weight:600!important;border-bottom:none!important;}
+  .nav-cta:hover{background:var(--green-light)!important;}
+  .hamburger{display:none;cursor:pointer;flex-direction:column;gap:5px;}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--dark);border-radius:2px;}
+  .mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:white;border-bottom:1px solid #e0ede0;padding:20px 5%;flex-direction:column;gap:0;z-index:999;}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{text-decoration:none;color:var(--dark);font-weight:500;padding:12px 0;border-bottom:1px solid #f0f0f0;cursor:pointer;}
+
+  /* PAGE SYSTEM */
+  .page{display:none;padding-top:70px;min-height:100vh;animation:fadeIn .3s ease;}
+  .page.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+  /* SHARED */
+  .section{padding:70px 5%;}
+  .container{max-width:1100px;margin:0 auto;}
+  .section-label{display:inline-block;background:var(--green-pale);color:var(--green);padding:5px 14px;border-radius:100px;font-size:.78rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:12px;}
+  .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;color:var(--dark);margin-bottom:14px;line-height:1.2;}
+  .section-desc{font-size:1rem;color:var(--gray);line-height:1.7;max-width:580px;}
+  .centered{text-align:center;}.centered .section-desc{margin:0 auto;}
+  .btn-primary{background:var(--green);color:white;padding:13px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:.92rem;transition:all .2s;border:none;cursor:pointer;display:inline-block;}
+  .btn-primary:hover{background:var(--green-light);transform:translateY(-2px);box-shadow:0 8px 20px rgba(46,125,50,.3);}
+  .btn-outline{background:transparent;color:var(--green);padding:13px 28px;border-radius:10px;font-weight:600;font-size:.92rem;border:2px solid var(--green);transition:all .2s;cursor:pointer;display:inline-block;text-decoration:none;}
+  .btn-outline:hover{background:var(--green-pale);}
+  .success-msg{background:var(--green-pale);border:1px solid var(--green-mid);color:var(--green);padding:14px 20px;border-radius:10px;font-size:.9rem;font-weight:600;display:none;margin-top:14px;}
+
+  /* HERO */
+  .hero{min-height:calc(100vh - 70px);background:linear-gradient(160deg,#fff 0%,#E8F5E9 60%,#C8E6C9 100%);display:flex;align-items:center;padding:60px 5%;}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1100px;margin:0 auto;width:100%;}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--green-pale);border:1px solid var(--green-mid);color:var(--green);padding:6px 16px;border-radius:100px;font-size:.8rem;font-weight:600;margin-bottom:18px;}
+  .hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.6rem);font-weight:900;line-height:1.1;margin-bottom:18px;}
+  .hero-title .green{color:var(--green);}
+  .hero-desc{font-size:1rem;color:var(--gray);line-height:1.7;margin-bottom:32px;}
+  .hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:32px;}
+  .trust-bar{display:flex;gap:24px;flex-wrap:wrap;}
+  .trust-item{display:flex;align-items:center;gap:8px;font-size:.83rem;color:var(--gray);font-weight:500;}
+  .trust-item .check{width:20px;height:20px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:11px;}
+  .hero-cards{display:flex;flex-direction:column;gap:14px;}
+  .hero-card{background:white;border-radius:18px;padding:22px;box-shadow:0 4px 20px rgba(0,0,0,.07);border:1px solid #e8f5e9;display:flex;align-items:center;gap:16px;transition:transform .2s;cursor:pointer;}
+  .hero-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(46,125,50,.12);}
+  .hero-card-icon{width:54px;height:54px;background:var(--green-pale);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;}
+  .hero-card h3{font-size:.95rem;font-weight:600;margin-bottom:3px;}
+  .hero-card p{font-size:.82rem;color:var(--gray);}
+
+  /* SERVICE PAGE HERO */
+  .page-hero{background:linear-gradient(135deg,var(--green-pale),#C8E6C9);padding:60px 5%;border-bottom:1px solid #c8e6c9;}
+  .page-hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
+  .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;line-height:1.15;margin-bottom:12px;}
+  .page-hero p{font-size:1rem;color:var(--gray);line-height:1.7;max-width:520px;}
+  .page-hero-icon{font-size:90px;opacity:.85;}
+
+  /* FEATURES GRID */
+  .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
+  .feature-card{background:var(--off-white);border-radius:16px;padding:24px;border-left:3px solid var(--green);}
+  .feature-card .fi{font-size:26px;margin-bottom:12px;}
+  .feature-card h4{font-size:.95rem;font-weight:700;margin-bottom:6px;}
+  .feature-card p{font-size:.85rem;color:var(--gray);line-height:1.6;}
+
+  /* TWO COL */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start;}
+
+  /* CHECKLIST */
+  .checklist-box{background:var(--off-white);border-radius:20px;padding:32px;}
+  .checklist-box h3{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:18px;}
+  .check-item{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #e8f5e9;font-size:.88rem;}
+  .check-item:last-child{border-bottom:none;}
+  .check-dot{width:22px;height:22px;background:var(--green);border-radius:6px;display:flex;align-items:center;justify-content:center;color:white;font-size:12px;flex-shrink:0;}
+  .guarantee{background:var(--green);border-radius:16px;padding:26px;color:white;margin-top:20px;display:flex;gap:14px;align-items:flex-start;}
+  .guarantee .gi{font-size:34px;flex-shrink:0;}
+  .guarantee h4{font-size:.95rem;font-weight:700;margin-bottom:5px;}
+  .guarantee p{font-size:.83rem;opacity:.85;line-height:1.5;}
+
+  /* STATS ROW */
+  .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:40px 0;}
+  .stat-box{background:white;border-radius:16px;padding:24px;text-align:center;box-shadow:0 2px 14px rgba(0,0,0,.06);border:1px solid #e8f5e9;}
+  .stat-box .sn{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--green);}
+  .stat-box .sl{font-size:.78rem;color:var(--gray);margin-top:4px;}
+
+  /* SERVICES GRID */
+  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
+  .svc-card{background:white;border-radius:20px;padding:28px 22px;border:1px solid #e8f5e9;transition:all .25s;cursor:pointer;}
+  .svc-card:hover:not(.inactive){transform:translateY(-5px);box-shadow:0 12px 30px rgba(46,125,50,.12);border-color:var(--green-mid);}
+  .svc-card.inactive{opacity:.65;cursor:default;}
+  .svc-icon{width:52px;height:52px;background:var(--green-pale);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:16px;}
+  .svc-card h3{font-size:.95rem;font-weight:700;margin-bottom:7px;}
+  .svc-card p{font-size:.83rem;color:var(--gray);line-height:1.6;margin-bottom:12px;}
+  .coming-soon{display:inline-block;background:#FFF9C4;color:#F57F17;font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:100px;}
+  .view-more{display:inline-flex;align-items:center;gap:6px;color:var(--green);font-size:.83rem;font-weight:600;margin-top:6px;}
+
+  /* ABOUT */
+  .about-visual{background:linear-gradient(135deg,#E8F5E9,#A5D6A7);border-radius:24px;padding:50px 30px;text-align:center;}
+  .about-values{display:flex;flex-direction:column;gap:18px;margin-top:24px;}
+  .about-value{display:flex;gap:14px;align-items:flex-start;}
+  .value-dot{width:10px;height:10px;background:var(--green);border-radius:50%;flex-shrink:0;margin-top:7px;}
+  .about-value h4{font-size:.92rem;font-weight:600;margin-bottom:4px;}
+  .about-value p{font-size:.83rem;color:var(--gray);line-height:1.5;}
+
+  /* FAQ */
+  .faq-wrap{max-width:760px;margin:0 auto;}
+  .faq-item{background:white;border-radius:14px;margin-bottom:10px;border:1px solid #e8f5e9;overflow:hidden;}
+  .faq-q{padding:18px 22px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:.9rem;transition:background .2s;}
+  .faq-q:hover{background:var(--green-pale);}
+  .faq-toggle{width:26px;height:26px;background:var(--green-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green);font-size:1.1rem;flex-shrink:0;transition:transform .3s;}
+  .faq-a{padding:0 22px;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s;font-size:.87rem;color:var(--gray);line-height:1.7;}
+  .faq-item.open .faq-a{max-height:300px;padding:0 22px 18px;}
+  .faq-item.open .faq-toggle{transform:rotate(45deg);}
+
+  /* QUOTE FORM */
+  .quote-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:40px;align-items:start;max-width:960px;margin:0 auto;}
+  .quote-info{background:var(--green);border-radius:20px;padding:34px;color:white;}
+  .quote-info h3{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:14px;}
+  .quote-info p{font-size:.87rem;opacity:.85;line-height:1.7;margin-bottom:24px;}
+  .qi-row{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;}
+  .qi-icon{width:32px;height:32px;background:rgba(255,255,255,.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
+  .qi-row h5{font-size:.88rem;font-weight:600;}
+  .qi-row span{font-size:.78rem;opacity:.75;}
+  .quote-form{background:var(--off-white);border-radius:20px;padding:34px;}
+  .form-group{margin-bottom:16px;}
+  .form-group label{display:block;font-size:.83rem;font-weight:600;margin-bottom:5px;}
+  .form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 14px;border:1.5px solid #dde8dd;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:.88rem;background:white;color:var(--dark);transition:border .2s;outline:none;}
+  .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--green);}
+  .form-group textarea{resize:vertical;min-height:90px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+
+  /* CONTACT */
+  .contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:800px;margin:0 auto 40px;}
+  .cc{background:white;border-radius:16px;padding:26px 22px;text-align:center;border:1px solid #e8f5e9;}
+  .cc .ci{width:50px;height:50px;background:var(--green-pale);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 12px;}
+  .cc h4{font-size:.9rem;font-weight:700;margin-bottom:5px;}
+  .cc p{font-size:.83rem;color:var(--gray);}
+  .cc a{color:var(--green);text-decoration:none;font-weight:600;}
+
+  /* FOOTER */
+  footer{background:var(--dark);color:white;padding:46px 5% 28px;}
+  .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+  .footer-brand p{font-size:.83rem;color:#aaa;line-height:1.7;margin-top:12px;max-width:280px;}
+  .footer-col h4{font-size:.87rem;font-weight:700;margin-bottom:14px;color:var(--green-mid);}
+  .footer-col ul{list-style:none;}
+  .footer-col ul li{margin-bottom:9px;}
+  .footer-col ul a{color:#aaa;text-decoration:none;font-size:.83rem;transition:color .2s;cursor:pointer;}
+  .footer-col ul a:hover{color:white;}
+  .footer-bottom{border-top:1px solid #2d3d2d;padding-top:22px;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:#777;}
+
+  /* RESPONSIVE */
+  @media(max-width:900px){
+    .hero-grid,.two-col,.quote-grid{grid-template-columns:1fr;}
+    .stats-row{grid-template-columns:1fr 1fr;}
+    .contact-cards{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+    nav ul{display:none;}
+    .hamburger{display:flex;}
+    .page-hero-icon{display:none;}
+  }
+  @media(max-width:600px){
+    .form-row{grid-template-columns:1fr;}
+    .stats-row{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo" onclick="showPage('home')">
+    <div class="logo-icon">🗑️</div>
+    <div class="logo-text">Perth <span>Cleaning</span><br>Solutions</div>
+  </div>
+  <ul>
+    <li><a onclick="showPage('home')" data-page="home">Home</a></li>
+    <li><a onclick="showPage('bin')" data-page="bin">Bin Cleaning</a></li>
+    <li><a onclick="showPage('lease')" data-page="lease">End of Lease</a></li>
+    <li><a onclick="showPage('services')" data-page="services">Services</a></li>
+    <li><a onclick="showPage('about')" data-page="about">About</a></li>
+    <li><a onclick="showPage('faq')" data-page="faq">FAQ</a></li>
+    <li><a onclick="showPage('contact')" data-page="contact">Contact</a></li>
+    <li><a onclick="showPage('quote')" data-page="quote" class="nav-cta">Get a Quote</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="nav('home')">🏠 Home</a>
+  <a onclick="nav('bin')">🗑️ Bin Cleaning</a>
+  <a onclick="nav('lease')">🔑 End of Lease</a>
+  <a onclick="nav('services')">🧹 All Services</a>
+  <a onclick="nav('about')">👋 About Us</a>
+  <a onclick="nav('faq')">❓ FAQ</a>
+  <a onclick="nav('contact')">📞 Contact</a>
+  <a onclick="nav('quote')" style="color:var(--green);font-weight:700;">Get a Free Quote →</a>
+</div>
+
+<!-- ═══════════════ HOME PAGE ═══════════════ -->
+<div class="page active" id="page-home">
+  <div class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">⭐ Perth's Trusted Cleaning Experts</div>
+        <h1 class="hero-title">Perth's Premier<br><span class="green">Bin & Home</span><br>Cleaning Service</h1>
+        <p class="hero-desc">From freshly sanitised wheelie bins to spotless end-of-lease cleans — we cover it all. Reliable, affordable, and proud to serve the Perth community.</p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="showPage('quote')">Get a Free Quote</button>
+          <button class="btn-outline" onclick="showPage('services')">Our Services</button>
+        </div>
+        <div class="trust-bar">
+          <div class="trust-item"><div class="check">✓</div> Fully Insured</div>
+          <div class="trust-item"><div class="check">✓</div> Eco-Friendly</div>
+          <div class="trust-item"><div class="check">✓</div> Perth-Based & Local</div>
+        </div>
+      </div>
+      <div class="hero-cards">
+        <div class="hero-card" onclick="showPage('bin')">
+          <div class="hero-card-icon">🗑️</div>
+          <div><h3>Residential Bin Cleaning</h3><p>Deodorised, sanitised & sparkling clean bins on collection day</p></div>
+        </div>
+        <div class="hero-card" onclick="showPage('lease')">
+          <div class="hero-card-icon">🏠</div>
+          <div><h3>End of Lease Cleaning</h3><p>Bond-back guaranteed deep cleans for tenants & landlords</p></div>
+        </div>
+        <div class="hero-card" onclick="showPage('services')">
+          <div class="hero-card-icon">🔧</div>
+          <div><h3>More Services Coming Soon</h3><p>Pressure washing, BBQ cleaning, lawn mowing & more</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Choose Us -->
+  <div class="section" style="background:var(--off-white);">
+    <div class="container">
+      <div class="section-header centered" style="margin-bottom:40px;">
+        <div class="section-label">💚 Why Perth Cleaning Solutions</div>
+        <h2 class="section-title">Built for Perth Homeowners</h2>
+        <p class="section-desc">We're not a national franchise. We're your local neighbours who care about the job getting done right.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="fi">📍</div><h4>Locally Owned & Operated</h4><p>Based in Perth, serving Perth. We know the suburbs, the councils, and the community.</p></div>
+        <div class="feature-card"><div class="fi">🌿</div><h4>Eco-Friendly Products</h4><p>All products are biodegradable and safe for your family, pets, and the environment.</p></div>
+        <div class="feature-card"><div class="fi">⏰</div><h4>Reliable & On Time</h4><p>We show up when we say we will. No missed bookings. No excuses.</p></div>
+        <div class="feature-card"><div class="fi">🛡️</div><h4>Satisfaction Guaranteed</h4><p>Not happy? We come back and fix it. Simple as that.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ BIN CLEANING PAGE ═══════════════ -->
+<div class="page" id="page-bin">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <div class="section-label">🗑️ Bin Cleaning</div>
+        <h1>Residential Bin Cleaning<br>in Perth</h1>
+        <p>High-pressure hot wash, eco-deodorise, and sanitise — scheduled on your council collection day. No odours. No maggots. No hassle.</p>
+        <div style="margin-top:24px;display:flex;gap:14px;flex-wrap:wrap;">
+          <button class="btn-primary" onclick="showPage('quote')">Book a Bin Clean</button>
+          <button class="btn-outline" onclick="showPage('contact')">Contact Us</button>
+        </div>
+      </div>
+      <div class="page-hero-icon">🗑️</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-box"><div class="sn">99%</div><div class="sl">Bacteria removed</div></div>
+        <div class="stat-box"><div class="sn">100%</div><div class="sl">Eco-safe products</div></div>
+        <div class="stat-box"><div class="sn">~30min</div><div class="sl">Service time</div></div>
+        <div class="stat-box"><div class="sn">5⭐</div><div class="sl">Customer rating</div></div>
+      </div>
+
+      <div style="margin-bottom:14px;"><div class="section-label">What We Do</div></div>
+      <h2 class="section-title">How Our Bin Clean Works</h2>
+      <p class="section-desc" style="margin-bottom:36px;">A professional bin clean takes under 30 minutes and leaves your bins hygienically clean every time.</p>
+      <div class="features-grid">
+        <div class="feature-card"><div class="fi">🚿</div><h4>High-Pressure Hot Water</h4><p>We blast away grime, bacteria, and residue from inside and outside using industrial-grade hot water pressure jets.</p></div>
+        <div class="feature-card"><div class="fi">🌿</div><h4>Eco-Friendly Deodoriser</h4><p>We apply a biodegradable deodoriser that leaves your bin smelling fresh and inhibits bacterial regrowth.</p></div>
+        <div class="feature-card"><div class="fi">📅</div><h4>Scheduled on Collection Day</h4><p>We clean your bins on the same day as your council rubbish collection — empty bins, fresh results every time.</p></div>
+        <div class="feature-card"><div class="fi">🔁</div><h4>One-Off or Regular Service</h4><p>Choose a single clean or set up a fortnightly/monthly schedule — whatever suits your household best.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="background:var(--off-white);">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <div class="section-label">Pricing</div>
+          <h2 class="section-title">Simple, Honest Pricing</h2>
+          <p class="section-desc" style="margin-bottom:24px;">Pricing depends on the number of bins and your suburb. Get a personalised quote — no obligation, no hidden fees.</p>
+          <button class="btn-primary" onclick="showPage('quote')">Get My Free Quote →</button>
+          <div style="margin-top:20px;font-size:.85rem;color:var(--gray);">📞 Or call us: <a href="tel:0400000000" style="color:var(--green);font-weight:600;">0400 000 000</a></div>
+        </div>
+        <div>
+          <div style="background:white;border-radius:20px;padding:28px;border:1px solid #e8f5e9;">
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:18px;">What's Included in Every Clean</h3>
+            <div class="check-item"><div class="check-dot">✓</div> Inside & outside of bin</div>
+            <div class="check-item"><div class="check-dot">✓</div> Lid and handles sanitised</div>
+            <div class="check-item"><div class="check-dot">✓</div> Eco deodoriser applied</div>
+            <div class="check-item"><div class="check-dot">✓</div> Bin returned to your property</div>
+            <div class="check-item"><div class="check-dot">✓</div> Scheduled on collection day</div>
+            <div class="check-item"><div class="check-dot">✓</div> General rubbish (120L & 240L bins)</div>
+            <div class="check-item"><div class="check-dot">✓</div> Recycling & green waste bins available</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ END OF LEASE PAGE ═══════════════ -->
+<div class="page" id="page-lease">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <div class="section-label">🏠 End of Lease</div>
+        <h1>End of Lease Cleaning<br>Done Right</h1>
+        <p>Moving out? Our thorough end-of-lease clean follows REIWA standards to help you get your full bond back — guaranteed.</p>
+        <div style="margin-top:24px;display:flex;gap:14px;flex-wrap:wrap;">
+          <button class="btn-primary" onclick="showPage('quote')">Get a Lease Clean Quote</button>
+          <button class="btn-outline" onclick="showPage('contact')">Contact Us</button>
+        </div>
+      </div>
+      <div class="page-hero-icon">🔑</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <div class="section-label">Bond-Back Guarantee</div>
+          <h2 class="section-title">We Clean to Your Property Manager's Standard</h2>
+          <p style="font-size:.95rem;color:var(--gray);line-height:1.7;margin-bottom:20px;">We follow Real Estate Institute of Western Australia (REIWA) cleaning standards so you can move out with complete confidence. Every room, every surface, every detail.</p>
+          <p style="font-size:.95rem;color:var(--gray);line-height:1.7;margin-bottom:28px;">Our team is experienced in what property managers look for, and we won't sign off until the property is immaculate.</p>
+          <div class="guarantee">
+            <div class="gi">🛡️</div>
+            <div>
+              <h4>Our Bond-Back Promise</h4>
+              <p>If your property manager is not satisfied, we'll return and re-clean the affected areas at no extra charge.</p>
+            </div>
+          </div>
+          <div style="margin-top:24px;">
+            <button class="btn-primary" onclick="showPage('quote')">Book an End of Lease Clean</button>
+          </div>
+        </div>
+        <div class="checklist-box">
+          <h3>✅ Full Clean Checklist</h3>
+          <div class="check-item"><div class="check-dot">✓</div> Kitchen — oven, stovetop, rangehood, benchtops</div>
+          <div class="check-item"><div class="check-dot">✓</div> Bathrooms — toilets, tiles, mirrors, fixtures</div>
+          <div class="check-item"><div class="check-dot">✓</div> All bedrooms — vacuuming, mopping, surfaces</div>
+          <div class="check-item"><div class="check-dot">✓</div> Living & dining areas — full deep clean</div>
+          <div class="check-item"><div class="check-dot">✓</div> Windows — interior glass & tracks</div>
+          <div class="check-item"><div class="check-dot">✓</div> Walls — spot clean marks & scuffs</div>
+          <div class="check-item"><div class="check-dot">✓</div> Skirting boards & light switches</div>
+          <div class="check-item"><div class="check-dot">✓</div> Laundry — machine, tub, dryer area</div>
+          <div class="check-item"><div class="check-dot">✓</div> Garage & outdoor areas (on request)</div>
+          <div class="check-item"><div class="check-dot">✓</div> Carpet steam cleaning (optional add-on)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="background:var(--off-white);">
+    <div class="container centered">
+      <div class="section-label">Why Choose Us</div>
+      <h2 class="section-title">The Smartest Move You'll Make</h2>
+      <p class="section-desc" style="margin-bottom:36px;">End of lease cleaning is stressful. We take that stress away completely.</p>
+      <div class="features-grid">
+        <div class="feature-card"><div class="fi">📋</div><h4>REIWA Standard Clean</h4><p>We follow the exact checklist that Perth property managers use to assess properties.</p></div>
+        <div class="feature-card"><div class="fi">⏱️</div><h4>Fast Turnaround</h4><p>We work around your moving timeline. Early mornings and weekends available on request.</p></div>
+        <div class="feature-card"><div class="fi">🧴</div><h4>Professional-Grade Products</h4><p>Commercial-strength, eco-safe cleaning products that get the tough jobs done.</p></div>
+        <div class="feature-card"><div class="fi">🔄</div><h4>Re-clean Guarantee</h4><p>If anything is flagged, we come back. No extra charge, no arguments.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ SERVICES PAGE ═══════════════ -->
+<div class="page" id="page-services">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <div class="section-label">🧹 All Services</div>
+        <h1>Everything We Offer</h1>
+        <p>Currently specialising in bin cleaning and end-of-lease cleans, with exciting new services launching soon across Perth.</p>
+      </div>
+      <div class="page-hero-icon">🧹</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom:30px;">Available Now</h2>
+      <div class="services-grid" style="margin-bottom:50px;">
+        <div class="svc-card" onclick="showPage('bin')">
+          <div class="svc-icon">🗑️</div>
+          <h3>Residential Bin Cleaning</h3>
+          <p>High-pressure hot wash and deodorise of your wheelie bins on council collection day.</p>
+          <div class="view-more">Learn more →</div>
+        </div>
+        <div class="svc-card" onclick="showPage('lease')">
+          <div class="svc-icon">🏠</div>
+          <h3>End of Lease Cleaning</h3>
+          <p>Comprehensive bond-back clean following REIWA standards. We won't leave until it's perfect.</p>
+          <div class="view-more">Learn more →</div>
+        </div>
+      </div>
+
+      <h2 class="section-title" style="margin-bottom:10px;">Coming Soon</h2>
+      <p style="font-size:.9rem;color:var(--gray);margin-bottom:28px;">We're expanding! These services are launching soon across Perth.</p>
+      <div class="services-grid">
+        <div class="svc-card inactive">
+          <div class="svc-icon">🔥</div>
+          <h3>BBQ & Grill Cleaning</h3>
+          <p>Deep degrease and sanitise of outdoor BBQs and grills for safe, clean cooking.</p>
+          <span class="coming-soon">Coming Soon</span>
+        </div>
+        <div class="svc-card inactive">
+          <div class="svc-icon">💧</div>
+          <h3>Pressure Wash Driveways</h3>
+          <p>Blast away dirt, oil stains, mould and grime from driveways, paths, and outdoor areas.</p>
+          <span class="coming-soon">Coming Soon</span>
+        </div>
+        <div class="svc-card inactive">
+          <div class="svc-icon">🌿</div>
+          <h3>Lawn Mowing</h3>
+          <p>Regular mowing and edge trimming to keep your yard looking neat year-round.</p>
+          <span class="coming-soon">Coming Soon</span>
+        </div>
+        <div class="svc-card inactive">
+          <div class="svc-icon">🪟</div>
+          <h3>Window Cleaning</h3>
+          <p>Interior and exterior window cleans leaving streak-free, crystal-clear glass.</p>
+          <span class="coming-soon">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ ABOUT PAGE ═══════════════ -->
+<div class="page" id="page-about">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <div class="section-label">👋 About Us</div>
+        <h1>We're a Perth-Based<br>Local Business</h1>
+        <p>Founded with one goal — make Perth homes cleaner and Perth lives easier. We're a locally owned and operated business proud to serve our community.</p>
+      </div>
+      <div class="page-hero-icon">🌱</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="two-col">
+        <div class="about-visual">
+          <div style="font-size:80px;margin-bottom:16px;">🌱</div>
+          <p style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--dark);">"Clean spaces. Happier lives."</p>
+          <p style="font-size:.85rem;color:var(--gray);margin-top:8px;">Perth Cleaning Solutions — built by a local, for locals.</p>
+        </div>
+        <div>
+          <p style="font-size:.95rem;color:var(--gray);line-height:1.7;margin-bottom:20px;">Perth Cleaning Solutions was founded with one simple goal — to make your home cleaner and your life easier. We're a locally owned and operated business, proud to serve the Perth community with honest, reliable, and professional cleaning services.</p>
+          <p style="font-size:.95rem;color:var(--gray);line-height:1.7;margin-bottom:28px;">We started with residential bin cleaning — one of Perth's most overlooked but essential home services — and expanded to end-of-lease cleaning. We're growing steadily, with more services launching soon.</p>
+          <div class="about-values">
+            <div class="about-value"><div class="value-dot"></div><div><h4>Locally Owned & Operated</h4><p>We live and work in Perth. When you support us, you support a local business.</p></div></div>
+            <div class="about-value"><div class="value-dot"></div><div><h4>Eco-Friendly Approach</h4><p>We use environmentally safe products that are tough on dirt but gentle on the planet.</p></div></div>
+            <div class="about-value"><div class="value-dot"></div><div><h4>Reliability You Can Count On</h4><p>We show up when we say we will. No cancellations. No excuses.</p></div></div>
+            <div class="about-value"><div class="value-dot"></div><div><h4>Community-First Mindset</h4><p>Perth is our home. We're committed to giving back and doing right by our customers.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ FAQ PAGE ═══════════════ -->
+<div class="page" id="page-faq">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <div class="section-label">❓ FAQ</div>
+        <h1>Frequently Asked<br>Questions</h1>
+        <p>Everything you need to know about our services. Can't find an answer? Give us a call or send us a message.</p>
+      </div>
+      <div class="page-hero-icon">❓</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="faq-wrap">
+      <div class="faq-item open">
+        <div class="faq-q" onclick="toggleFaq(this)">How does the bin cleaning service work?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">We schedule your bin clean on the same day as your council rubbish collection. Once your bins have been emptied, our team arrives, gives them a thorough high-pressure hot water clean, applies an eco-friendly deodoriser, and returns them to your property — all within the same day.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How often should I get my bins cleaned?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">For most households, a monthly clean is sufficient. If you have a large family or generate a lot of food waste, a fortnightly clean is recommended. We offer both options at affordable rates.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Will the end of lease clean guarantee my bond back?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">We follow REIWA standards and our clean is designed to meet property manager expectations. If anything is flagged by your agent, we'll return and re-clean those areas at no extra charge. While we can't guarantee the actions of your property manager, we stand behind the quality of our work.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Do I need to be home during the clean?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">For bin cleaning, you don't need to be home at all — just leave your bins out after collection and we'll do the rest. For end of lease cleans, we recommend you or your representative be available, though it is not always required.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What areas in Perth do you service?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">We currently service Perth and surrounding suburbs. If you're unsure whether we cover your area, please contact us or fill out the quote form and we'll let you know right away.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Do you use eco-friendly products?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">Yes! All our cleaning products are environmentally safe and biodegradable. We care about the Perth environment and always choose products that are effective without harming your family or the earth.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How do I pay?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">We accept bank transfer, cash, and major credit/debit cards. For regular service plans, we can arrange a simple monthly payment. Details will be confirmed at the time of booking.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Can I bundle bin cleaning with end of lease?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">Absolutely! We offer bundle deals for customers who need both services. Select "Bundle" in the quote form and we'll put together a combined price for you.</div>
+      </div>
+      <div style="text-align:center;margin-top:36px;">
+        <p style="font-size:.9rem;color:var(--gray);margin-bottom:16px;">Still have a question?</p>
+        <button class="btn-primary" onclick="showPage('contact')">Contact Us</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ QUOTE PAGE ═══════════════ -->
+<div class="page" id="page-quote">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <div class="section-label">💬 Free Quote</div>
+        <h1>Get Your Free Quote</h1>
+        <p>Tell us what you need and we'll get back to you within 24 hours with a tailored quote — no obligation, no hidden fees.</p>
+      </div>
+      <div class="page-hero-icon">📋</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="quote-grid">
+      <div class="quote-info">
+        <h3>Why Get a Quote?</h3>
+        <p>Every home is different. We tailor pricing to your specific needs so you only pay for what you actually require.</p>
+        <div class="qi-row"><div class="qi-icon">✅</div><div><h5>No Obligation</h5><span>Getting a quote is completely free</span></div></div>
+        <div class="qi-row"><div class="qi-icon">⚡</div><div><h5>Fast Response</h5><span>We reply within 24 hours</span></div></div>
+        <div class="qi-row"><div class="qi-icon">💚</div><div><h5>Personalised Pricing</h5><span>Tailored to your home & needs</span></div></div>
+        <div style="border-top:1px solid rgba(255,255,255,.2);padding-top:18px;margin-top:8px;">
+          <div style="font-size:.78rem;opacity:.7;margin-bottom:6px;">Prefer to call?</div>
+          <a href="tel:0400000000" style="color:white;font-weight:700;font-size:1rem;text-decoration:none;">📞 0400 000 000</a>
+        </div>
+      </div>
+      <div class="quote-form">
+        <div class="form-row">
+          <div class="form-group"><label>First Name *</label><input type="text" placeholder="John" id="q-fname"></div>
+          <div class="form-group"><label>Last Name *</label><input type="text" placeholder="Smith" id="q-lname"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Phone *</label><input type="tel" placeholder="04XX XXX XXX" id="q-phone"></div>
+          <div class="form-group"><label>Email *</label><input type="email" placeholder="john@email.com" id="q-email"></div>
+        </div>
+        <div class="form-group">
+          <label>Service Required *</label>
+          <select id="q-service">
+            <option value="">— Select a service —</option>
+            <option>Bin Cleaning — One-Off</option>
+            <option>Bin Cleaning — Regular Schedule</option>
+            <option>End of Lease Cleaning</option>
+            <option>Bin Cleaning + End of Lease (Bundle)</option>
+            <option>Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Suburb / Area *</label><input type="text" placeholder="e.g. Joondalup, Fremantle..." id="q-suburb"></div>
+        <div class="form-group">
+          <label>Property Type</label>
+          <select id="q-property">
+            <option value="">— Select —</option>
+            <option>House</option><option>Apartment / Unit</option><option>Townhouse</option><option>Other</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Additional Details</label><textarea placeholder="Number of bins, bedrooms, preferred date, special requirements..." id="q-msg"></textarea></div>
+        <button class="btn-primary" style="width:100%;font-size:.95rem;padding:15px;" onclick="submitQuote()">Request My Free Quote →</button>
+        <div class="success-msg" id="quoteSuccess">✅ Quote request sent! We'll be in touch within 24 hours.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ CONTACT PAGE ═══════════════ -->
+<div class="page" id="page-contact">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <div class="section-label">📞 Contact</div>
+        <h1>Get in Touch</h1>
+        <p>We're always happy to hear from you. Reach out via phone, email, or fill out our quote form and we'll get right back to you.</p>
+      </div>
+      <div class="page-hero-icon">📞</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="contact-cards">
+        <div class="cc"><div class="ci">📞</div><h4>Call Us</h4><p><a href="tel:0400000000">0400 000 000</a></p><p style="margin-top:4px;font-size:.78rem;">Mon–Sat, 7am–6pm</p></div>
+        <div class="cc"><div class="ci">📧</div><h4>Email Us</h4><p><a href="mailto:info@perthcleaningsolutions.com.au">info@perthcleaningsolutions.com.au</a></p></div>
+        <div class="cc"><div class="ci">📍</div><h4>Location</h4><p>Perth, Western Australia</p><p style="margin-top:4px;font-size:.78rem;">Serving all Perth suburbs</p></div>
+      </div>
+      <div style="text-align:center;margin-top:10px;">
+        <p style="font-size:.9rem;color:var(--gray);margin-bottom:18px;">Want a price? Fill out our quick quote form.</p>
+        <button class="btn-primary" onclick="showPage('quote')">Get a Free Quote →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo" onclick="showPage('home')">
+        <div class="logo-icon">🗑️</div>
+        <div class="logo-text" style="color:white;">Perth <span>Cleaning</span><br>Solutions</div>
+      </div>
+      <p>Perth's trusted local cleaning service. From wheelie bins to end-of-lease cleans. Proudly serving the Perth community.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <ul>
+        <li><a onclick="showPage('home')">Home</a></li>
+        <li><a onclick="showPage('bin')">Bin Cleaning</a></li>
+        <li><a onclick="showPage('lease')">End of Lease</a></li>
+        <li><a onclick="showPage('services')">All Services</a></li>
+        <li><a onclick="showPage('about')">About Us</a></li>
+        <li><a onclick="showPage('faq')">FAQ</a></li>
+        <li><a onclick="showPage('contact')">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a onclick="showPage('bin')">Residential Bin Cleaning</a></li>
+        <li><a onclick="showPage('lease')">End of Lease Cleaning</a></li>
+        <li><a onclick="showPage('services')">BBQ Cleaning (Soon)</a></li>
+        <li><a onclick="showPage('services')">Pressure Washing (Soon)</a></li>
+        <li><a onclick="showPage('services')">Lawn Mowing (Soon)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 <span style="color:var(--green-mid)">Perth Cleaning Solutions</span>. All rights reserved.</div>
+    <div>Made with 💚 in Perth, WA</div>
+  </div>
+</footer>
+
+<script>
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + id).classList.add('active');
+    document.querySelectorAll('nav ul li a[data-page]').forEach(a => {
+      a.classList.toggle('active', a.dataset.page === id);
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+
+  function nav(id) {
+    showPage(id);
+  }
+
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    document.querySelectorAll('.faq-item').forEach(i => { if (i !== item) i.classList.remove('open'); });
+    item.classList.toggle('open');
+  }
+
+  function submitQuote() {
+    const fname = document.getElementById('q-fname').value;
+    const phone = document.getElementById('q-phone').value;
+    const service = document.getElementById('q-service').value;
+    const suburb = document.getElementById('q-suburb').value;
+    if (!fname || !phone || !service || !suburb) { alert('Please fill in all required fields (*)'); return; }
+    ['q-fname','q-lname','q-phone','q-email','q-suburb','q-msg'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('q-service').value = '';
+    document.getElementById('q-property').value = '';
+    const msg = document.getElementById('quoteSuccess');
+    msg.style.display = 'block';
+    setTimeout(() => msg.style.display = 'none', 6000);
+  }
+</script>
+</body>
+</html>
