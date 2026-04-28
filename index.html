@@ -3,7 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Perth Eco Clean Co. | Bin & Lease Cleaning</title>
+
+<!-- ═══ PRIMARY SEO META TAGS ═══ -->
+<title>Perth Eco Clean Co. | Best Cleaners in Perth WA — Bin, Bond & End of Lease Cleaning</title>
+<meta name="description" content="Perth Eco Clean Co. — the best cleaners in Perth WA. Affordable bond cleaning, end of lease cleaning, move out cleaning, same day cleaners, emergency cleaning, weekly house cleaning, wheelie bin cleaning, window cleaning & curtain cleaning. Book your cleaning service today!">
+<meta name="keywords" content="best cleaners in Perth WA, book cleaning service Perth, same day cleaners Perth, emergency cleaning Perth, move out cleaning Perth, weekly house cleaning Perth, affordable bond cleaning Perth, cleaning services Perth, professional cleaners Perth, house cleaning Perth, end of lease cleaning Perth, bond cleaning Perth, commercial cleaning Perth, residential cleaning Perth, local cleaners near me, affordable cleaning services Perth, same day cleaning Perth, bond back cleaning Perth, driveway cleaning Perth, pressure washing Perth, window cleaning Perth, curtain cleaning Perth, grill cleaning service Perth, oven and BBQ cleaning Perth, bin cleaning service Perth, wheelie bin cleaning Perth, vacate cleaning Perth">
+<meta name="author" content="Perth Eco Clean Co.">
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="AU-WA">
+<meta name="geo.placename" content="Perth">
+
+<!-- ═══ OPEN GRAPH ═══ -->
+<meta property="og:title" content="Perth Eco Clean Co. | Professional Cleaning Services Perth">
+<meta property="og:description" content="Affordable professional cleaning services in Perth — bin cleaning, end of lease, bond cleaning, window cleaning, pressure washing & more. Local cleaners near you.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_AU">
+
+<!-- ═══ LOCAL BUSINESS SCHEMA ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Perth Eco Clean Co.",
+  "description": "Professional cleaning services in Perth WA — residential cleaning, end of lease cleaning, bond cleaning, bin cleaning, window cleaning, pressure washing, curtain cleaning, oven and BBQ cleaning.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Perth",
+    "addressRegion": "WA",
+    "addressCountry": "AU"
+  },
+  "telephone": "0400000000",
+  "email": "info@perthecleaningco.com.au",
+  "url": "https://perthecleaningco.com.au",
+  "areaServed": "Perth, Western Australia",
+  "priceRange": "$$",
+  "openingHours": "Mo-Sa 07:00-18:00",
+  "serviceType": [
+    "Bin Cleaning", "Wheelie Bin Cleaning", "End of Lease Cleaning",
+    "Bond Cleaning", "Bond Back Cleaning", "Affordable Bond Cleaning",
+    "Move Out Cleaning", "Weekly House Cleaning", "Residential Cleaning",
+    "House Cleaning", "Commercial Cleaning", "Window Cleaning",
+    "Curtain Cleaning", "Pressure Washing", "Driveway Cleaning",
+    "Oven and BBQ Cleaning", "Grill Cleaning Service",
+    "Same Day Cleaners", "Emergency Cleaning", "Book Cleaning Service"
+  ]
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -13,8 +59,6 @@
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--dark);overflow-x:hidden;}
-
-  /* NAV */
   nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid #e0ede0;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;}
   .logo{display:flex;align-items:center;gap:12px;text-decoration:none;cursor:pointer;}
   .logo-icon{width:44px;height:44px;background:var(--green);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;}
@@ -30,13 +74,9 @@
   .mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:white;border-bottom:1px solid #e0ede0;padding:20px 5%;flex-direction:column;gap:0;z-index:999;}
   .mobile-menu.open{display:flex;}
   .mobile-menu a{text-decoration:none;color:var(--dark);font-weight:500;padding:12px 0;border-bottom:1px solid #f0f0f0;cursor:pointer;}
-
-  /* PAGE SYSTEM */
   .page{display:none;padding-top:70px;min-height:100vh;animation:fadeIn .3s ease;}
   .page.active{display:block;}
   @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-
-  /* SHARED */
   .section{padding:70px 5%;}
   .container{max-width:1100px;margin:0 auto;}
   .section-label{display:inline-block;background:var(--green-pale);color:var(--green);padding:5px 14px;border-radius:100px;font-size:.78rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:12px;}
@@ -48,8 +88,6 @@
   .btn-outline{background:transparent;color:var(--green);padding:13px 28px;border-radius:10px;font-weight:600;font-size:.92rem;border:2px solid var(--green);transition:all .2s;cursor:pointer;display:inline-block;text-decoration:none;}
   .btn-outline:hover{background:var(--green-pale);}
   .success-msg{background:var(--green-pale);border:1px solid var(--green-mid);color:var(--green);padding:14px 20px;border-radius:10px;font-size:.9rem;font-weight:600;display:none;margin-top:14px;}
-
-  /* HERO */
   .hero{min-height:calc(100vh - 70px);background:linear-gradient(160deg,#fff 0%,#E8F5E9 60%,#C8E6C9 100%);display:flex;align-items:center;padding:60px 5%;}
   .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1100px;margin:0 auto;width:100%;}
   .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--green-pale);border:1px solid var(--green-mid);color:var(--green);padding:6px 16px;border-radius:100px;font-size:.8rem;font-weight:600;margin-bottom:18px;}
@@ -66,25 +104,17 @@
   .hero-card-icon{width:54px;height:54px;background:var(--green-pale);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;}
   .hero-card h3{font-size:.95rem;font-weight:600;margin-bottom:3px;}
   .hero-card p{font-size:.82rem;color:var(--gray);}
-
-  /* SERVICE PAGE HERO */
   .page-hero{background:linear-gradient(135deg,var(--green-pale),#C8E6C9);padding:60px 5%;border-bottom:1px solid #c8e6c9;}
   .page-hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
   .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;line-height:1.15;margin-bottom:12px;}
   .page-hero p{font-size:1rem;color:var(--gray);line-height:1.7;max-width:520px;}
   .page-hero-icon{font-size:90px;opacity:.85;}
-
-  /* FEATURES GRID */
   .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
   .feature-card{background:var(--off-white);border-radius:16px;padding:24px;border-left:3px solid var(--green);}
   .feature-card .fi{font-size:26px;margin-bottom:12px;}
   .feature-card h4{font-size:.95rem;font-weight:700;margin-bottom:6px;}
   .feature-card p{font-size:.85rem;color:var(--gray);line-height:1.6;}
-
-  /* TWO COL */
   .two-col{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start;}
-
-  /* CHECKLIST */
   .checklist-box{background:var(--off-white);border-radius:20px;padding:32px;}
   .checklist-box h3{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:18px;}
   .check-item{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #e8f5e9;font-size:.88rem;}
@@ -94,14 +124,10 @@
   .guarantee .gi{font-size:34px;flex-shrink:0;}
   .guarantee h4{font-size:.95rem;font-weight:700;margin-bottom:5px;}
   .guarantee p{font-size:.83rem;opacity:.85;line-height:1.5;}
-
-  /* STATS ROW */
   .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:40px 0;}
   .stat-box{background:white;border-radius:16px;padding:24px;text-align:center;box-shadow:0 2px 14px rgba(0,0,0,.06);border:1px solid #e8f5e9;}
   .stat-box .sn{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--green);}
   .stat-box .sl{font-size:.78rem;color:var(--gray);margin-top:4px;}
-
-  /* SERVICES GRID */
   .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
   .svc-card{background:white;border-radius:20px;padding:28px 22px;border:1px solid #e8f5e9;transition:all .25s;cursor:pointer;}
   .svc-card:hover:not(.inactive){transform:translateY(-5px);box-shadow:0 12px 30px rgba(46,125,50,.12);border-color:var(--green-mid);}
@@ -111,16 +137,12 @@
   .svc-card p{font-size:.83rem;color:var(--gray);line-height:1.6;margin-bottom:12px;}
   .coming-soon{display:inline-block;background:#FFF9C4;color:#F57F17;font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:100px;}
   .view-more{display:inline-flex;align-items:center;gap:6px;color:var(--green);font-size:.83rem;font-weight:600;margin-top:6px;}
-
-  /* ABOUT */
   .about-visual{background:linear-gradient(135deg,#E8F5E9,#A5D6A7);border-radius:24px;padding:50px 30px;text-align:center;}
   .about-values{display:flex;flex-direction:column;gap:18px;margin-top:24px;}
   .about-value{display:flex;gap:14px;align-items:flex-start;}
   .value-dot{width:10px;height:10px;background:var(--green);border-radius:50%;flex-shrink:0;margin-top:7px;}
   .about-value h4{font-size:.92rem;font-weight:600;margin-bottom:4px;}
   .about-value p{font-size:.83rem;color:var(--gray);line-height:1.5;}
-
-  /* FAQ */
   .faq-wrap{max-width:760px;margin:0 auto;}
   .faq-item{background:white;border-radius:14px;margin-bottom:10px;border:1px solid #e8f5e9;overflow:hidden;}
   .faq-q{padding:18px 22px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:.9rem;transition:background .2s;}
@@ -129,8 +151,6 @@
   .faq-a{padding:0 22px;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s;font-size:.87rem;color:var(--gray);line-height:1.7;}
   .faq-item.open .faq-a{max-height:300px;padding:0 22px 18px;}
   .faq-item.open .faq-toggle{transform:rotate(45deg);}
-
-  /* QUOTE FORM */
   .quote-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:40px;align-items:start;max-width:960px;margin:0 auto;}
   .quote-info{background:var(--green);border-radius:20px;padding:34px;color:white;}
   .quote-info h3{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:14px;}
@@ -146,16 +166,17 @@
   .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--green);}
   .form-group textarea{resize:vertical;min-height:90px;}
   .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-
-  /* CONTACT */
   .contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:800px;margin:0 auto 40px;}
   .cc{background:white;border-radius:16px;padding:26px 22px;text-align:center;border:1px solid #e8f5e9;}
   .cc .ci{width:50px;height:50px;background:var(--green-pale);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 12px;}
   .cc h4{font-size:.9rem;font-weight:700;margin-bottom:5px;}
   .cc p{font-size:.83rem;color:var(--gray);}
   .cc a{color:var(--green);text-decoration:none;font-weight:600;}
-
-  /* FOOTER */
+  .keywords-strip{background:var(--green-pale);padding:16px 5%;text-align:center;border-top:1px solid var(--green-mid);}
+  .keywords-strip p{font-size:.78rem;color:var(--gray);line-height:1.9;}
+  .keywords-strip strong{color:var(--green);}
+  .same-day-banner{background:var(--green);color:white;text-align:center;padding:12px 5%;font-size:.85rem;font-weight:600;}
+  .same-day-banner span{background:rgba(255,255,255,.2);padding:2px 10px;border-radius:100px;margin-right:8px;}
   footer{background:var(--dark);color:white;padding:46px 5% 28px;}
   .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px;}
   .footer-brand p{font-size:.83rem;color:#aaa;line-height:1.7;margin-top:12px;max-width:280px;}
@@ -165,8 +186,6 @@
   .footer-col ul a{color:#aaa;text-decoration:none;font-size:.83rem;transition:color .2s;cursor:pointer;}
   .footer-col ul a:hover{color:white;}
   .footer-bottom{border-top:1px solid #2d3d2d;padding-top:22px;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:#777;}
-
-  /* RESPONSIVE */
   @media(max-width:900px){
     .hero-grid,.two-col,.quote-grid{grid-template-columns:1fr;}
     .stats-row{grid-template-columns:1fr 1fr;}
@@ -219,37 +238,54 @@
 
 <!-- ═══════════════ HOME PAGE ═══════════════ -->
 <div class="page active" id="page-home">
+
+  <!-- Same Day Banner -->
+  <div class="same-day-banner">
+    <span>⚡ Same Day Cleaners Available</span> Emergency cleaning & urgent bookings welcome — <strong>book your cleaning service</strong> today across all Perth suburbs!
+  </div>
+
   <div class="hero">
     <div class="hero-grid">
       <div>
-        <div class="hero-badge">⭐ Perth's Trusted Cleaning Experts</div>
-        <h1 class="hero-title">Perth's Premier<br><span class="green">Bin & Home</span><br>Cleaning Service</h1>
-        <p class="hero-desc">From freshly sanitised wheelie bins to spotless end-of-lease cleans — we cover it all. Reliable, affordable, and proud to serve the Perth community.</p>
+        <div class="hero-badge">⭐ Rated the Best Cleaners in Perth WA</div>
+        <h1 class="hero-title">Perth's Trusted<br><span class="green">Professional Cleaning</span><br>Services</h1>
+        <p class="hero-desc">Perth Eco Clean Co. — the <strong>best cleaners in Perth WA</strong> for <strong>affordable cleaning services</strong>. From <strong>wheelie bin cleaning</strong> and <strong>end of lease cleaning</strong> to <strong>move out cleaning</strong>, <strong>weekly house cleaning</strong>, and <strong>emergency cleaning</strong>. Your trusted <strong>same day cleaners</strong> — ready when you need us most.</p>
         <div class="hero-btns">
           <button class="btn-primary" onclick="showPage('quote')">Get a Free Quote</button>
           <button class="btn-outline" onclick="showPage('services')">Our Services</button>
         </div>
         <div class="trust-bar">
-          <div class="trust-item"><div class="check">✓</div> Fully Insured</div>
-          <div class="trust-item"><div class="check">✓</div> Eco-Friendly</div>
-          <div class="trust-item"><div class="check">✓</div> Perth-Based & Local</div>
+          <div class="trust-item"><div class="check">✓</div> Best Cleaners Perth WA</div>
+          <div class="trust-item"><div class="check">✓</div> Emergency Cleaning</div>
+          <div class="trust-item"><div class="check">✓</div> Same Day Cleaners</div>
+          <div class="trust-item"><div class="check">✓</div> All Perth Suburbs</div>
         </div>
       </div>
       <div class="hero-cards">
         <div class="hero-card" onclick="showPage('bin')">
           <div class="hero-card-icon">🗑️</div>
-          <div><h3>Residential Bin Cleaning</h3><p>Deodorised, sanitised & sparkling clean bins on collection day</p></div>
+          <div><h3>Bin Cleaning Service & Wheelie Bin Cleaning</h3><p>Sanitised, deodorised & sparkling clean bins on your Perth council collection day</p></div>
         </div>
         <div class="hero-card" onclick="showPage('lease')">
           <div class="hero-card-icon">🏠</div>
-          <div><h3>End of Lease Cleaning</h3><p>Bond-back guaranteed deep cleans for tenants & landlords</p></div>
+          <div><h3>End of Lease & Bond Cleaning Perth</h3><p>REIWA-standard bond back cleaning with a full satisfaction guarantee</p></div>
         </div>
         <div class="hero-card" onclick="showPage('services')">
           <div class="hero-card-icon">🔧</div>
-          <div><h3>More Services Coming Soon</h3><p>Pressure washing, BBQ cleaning, lawn mowing & more</p></div>
+          <div><h3>More Cleaning Services Coming Soon</h3><p>Window cleaning, pressure washing, driveway cleaning, curtain cleaning & more</p></div>
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Keywords / Suburbs Strip -->
+  <div class="keywords-strip">
+    <p>
+      <strong>Our Cleaning Services:</strong> Bin Cleaning Service · Wheelie Bin Cleaning · End of Lease Cleaning · Bond Cleaning Perth · Affordable Bond Cleaning · Bond Back Cleaning · Move Out Cleaning · Weekly House Cleaning · House Cleaning · Residential Cleaning · Commercial Cleaning · Window Cleaning · Curtain Cleaning · Pressure Washing · Driveway Cleaning · Oven & BBQ Cleaning · Grill Cleaning Service · Same Day Cleaners · Emergency Cleaning · Book Cleaning Service
+    </p>
+    <p style="margin-top:6px;">
+      <strong>Serving:</strong> Joondalup · Fremantle · Rockingham · Mandurah · Midland · Armadale · Cannington · Subiaco · Scarborough · Baldivis · Cockburn · Stirling · Wanneroo · Canning Vale · Ellenbrook · Karrinyup · Nedlands · Cottesloe · Claremont · Thornlie
+    </p>
   </div>
 
   <!-- Why Choose Us -->
@@ -257,14 +293,16 @@
     <div class="container">
       <div class="section-header centered" style="margin-bottom:40px;">
         <div class="section-label">💚 Why Perth Eco Clean Co.</div>
-        <h2 class="section-title">Built for Perth Homeowners</h2>
-        <p class="section-desc">We're not a national franchise. We're your local neighbours who care about the job getting done right.</p>
+        <h2 class="section-title">The Best Cleaners in Perth WA — Affordable & Reliable</h2>
+        <p class="section-desc">Searching for <strong>local cleaners near me</strong> in Perth? We're the <strong>best cleaners in Perth WA</strong> — offering <strong>same day cleaners</strong>, <strong>emergency cleaning</strong>, <strong>weekly house cleaning</strong>, <strong>move out cleaning</strong>, and <strong>affordable bond cleaning</strong> across every Perth suburb.</p>
       </div>
       <div class="features-grid">
-        <div class="feature-card"><div class="fi">📍</div><h4>Locally Owned & Operated</h4><p>Based in Perth, serving Perth. We know the suburbs, the councils, and the community.</p></div>
-        <div class="feature-card"><div class="fi">🌿</div><h4>Eco-Friendly Products</h4><p>All products are biodegradable and safe for your family, pets, and the environment.</p></div>
-        <div class="feature-card"><div class="fi">⏰</div><h4>Reliable & On Time</h4><p>We show up when we say we will. No missed bookings. No excuses.</p></div>
-        <div class="feature-card"><div class="fi">🛡️</div><h4>Satisfaction Guaranteed</h4><p>Not happy? We come back and fix it. Simple as that.</p></div>
+        <div class="feature-card"><div class="fi">⭐</div><h4>Best Cleaners in Perth WA</h4><p>Rated by Perth customers as the most reliable and professional <strong>cleaning service</strong> — we take pride in every job, every time.</p></div>
+        <div class="feature-card"><div class="fi">📱</div><h4>Easy to Book Cleaning Service</h4><p>Ready to <strong>book your cleaning service</strong>? It takes just 2 minutes — fill in our quote form or call us directly and we'll handle the rest.</p></div>
+        <div class="feature-card"><div class="fi">🚨</div><h4>Emergency Cleaning & Same Day Cleaners</h4><p>Need urgent help? Our <strong>emergency cleaning</strong> and <strong>same day cleaners</strong> are available across Perth for last-minute bookings.</p></div>
+        <div class="feature-card"><div class="fi">📅</div><h4>Weekly House Cleaning</h4><p>Keep your Perth home consistently spotless with our regular <strong>weekly house cleaning</strong> service — flexible schedules to suit your lifestyle.</p></div>
+        <div class="feature-card"><div class="fi">🏠</div><h4>Move Out & Affordable Bond Cleaning</h4><p>Stress-free <strong>move out cleaning</strong> and <strong>affordable bond cleaning</strong> that meets REIWA standards — giving you the best chance of a full bond refund.</p></div>
+        <div class="feature-card"><div class="fi">🌿</div><h4>100% Eco-Friendly Products</h4><p>All our <strong>professional cleaning</strong> products are biodegradable and safe for your family, pets, and Perth's environment.</p></div>
       </div>
     </div>
   </div>
@@ -275,11 +313,11 @@
   <div class="page-hero">
     <div class="page-hero-inner">
       <div>
-        <div class="section-label">🗑️ Bin Cleaning</div>
-        <h1>Residential Bin Cleaning<br>in Perth</h1>
-        <p>High-pressure hot wash, eco-deodorise, and sanitise — scheduled on your council collection day. No odours. No maggots. No hassle.</p>
+        <div class="section-label">🗑️ Bin Cleaning Service Perth</div>
+        <h1>Professional Wheelie Bin<br>Cleaning Service in Perth</h1>
+        <p>Perth Eco Clean Co. is your trusted <strong>local bin cleaning service</strong>. We provide affordable <strong>wheelie bin cleaning</strong> across all Perth suburbs — high-pressure hot wash, eco-deodorise, and full sanitise scheduled on your council collection day. No odours. No maggots. No hassle.</p>
         <div style="margin-top:24px;display:flex;gap:14px;flex-wrap:wrap;">
-          <button class="btn-primary" onclick="showPage('quote')">Book a Bin Clean</button>
+          <button class="btn-primary" onclick="showPage('quote')">Book Your Bin Clean Today</button>
           <button class="btn-outline" onclick="showPage('contact')">Contact Us</button>
         </div>
       </div>
@@ -295,14 +333,14 @@
         <div class="stat-box"><div class="sn">~30min</div><div class="sl">Service time</div></div>
         <div class="stat-box"><div class="sn">5⭐</div><div class="sl">Customer rating</div></div>
       </div>
-      <div style="margin-bottom:14px;"><div class="section-label">What We Do</div></div>
-      <h2 class="section-title">How Our Bin Clean Works</h2>
-      <p class="section-desc" style="margin-bottom:36px;">A professional bin clean takes under 30 minutes and leaves your bins hygienically clean every time.</p>
+      <div style="margin-bottom:14px;"><div class="section-label">Perth Bin Cleaning Service</div></div>
+      <h2 class="section-title">How Our Wheelie Bin Cleaning Works</h2>
+      <p class="section-desc" style="margin-bottom:36px;">Our <strong>bin cleaning service in Perth</strong> is one of the most thorough and affordable available. In under 30 minutes, our <strong>professional cleaners</strong> leave your wheelie bins hygienically sanitised — removing all bacteria, odours, and residue.</p>
       <div class="features-grid">
-        <div class="feature-card"><div class="fi">🚿</div><h4>High-Pressure Hot Water</h4><p>We blast away grime, bacteria, and residue from inside and outside using industrial-grade hot water pressure jets.</p></div>
-        <div class="feature-card"><div class="fi">🌿</div><h4>Eco-Friendly Deodoriser</h4><p>We apply a biodegradable deodoriser that leaves your bin smelling fresh and inhibits bacterial regrowth.</p></div>
-        <div class="feature-card"><div class="fi">📅</div><h4>Scheduled on Collection Day</h4><p>We clean your bins on the same day as your council rubbish collection — empty bins, fresh results every time.</p></div>
-        <div class="feature-card"><div class="fi">🔁</div><h4>One-Off or Regular Service</h4><p>Choose a single clean or set up a fortnightly/monthly schedule — whatever suits your household best.</p></div>
+        <div class="feature-card"><div class="fi">🚿</div><h4>High-Pressure Hot Water Wash</h4><p>Our <strong>professional cleaners</strong> blast away grime, bacteria, and residue using industrial-grade hot water pressure jets — inside and out.</p></div>
+        <div class="feature-card"><div class="fi">🌿</div><h4>Eco-Friendly Bin Deodoriser</h4><p>We apply a biodegradable deodoriser after every <strong>bin cleaning service</strong>, leaving your wheelie bin smelling fresh and bacteria-free.</p></div>
+        <div class="feature-card"><div class="fi">📅</div><h4>Scheduled on Collection Day</h4><p>We time our <strong>wheelie bin cleaning</strong> on your Perth council collection day — so your bins are always empty and freshly cleaned.</p></div>
+        <div class="feature-card"><div class="fi">🔁</div><h4>One-Off or Regular Service</h4><p>Need a <strong>same day cleaning</strong> for your bins, or prefer a regular fortnightly/monthly <strong>bin cleaning service</strong>? We've got you covered.</p></div>
       </div>
     </div>
   </div>
@@ -311,21 +349,21 @@
     <div class="container">
       <div class="two-col">
         <div>
-          <div class="section-label">Pricing</div>
-          <h2 class="section-title">Simple, Honest Pricing</h2>
-          <p class="section-desc" style="margin-bottom:24px;">Pricing depends on the number of bins and your suburb. Get a personalised quote — no obligation, no hidden fees.</p>
-          <button class="btn-primary" onclick="showPage('quote')">Get My Free Quote →</button>
+          <div class="section-label">Affordable Bin Cleaning Prices Perth</div>
+          <h2 class="section-title">Affordable Bin Cleaning Services in Perth</h2>
+          <p class="section-desc" style="margin-bottom:24px;">Our <strong>bin cleaning service</strong> is one of Perth's most affordable. Pricing depends on the number of bins and your Perth suburb. Get a free, no-obligation personalised quote from your <strong>local cleaners</strong> today.</p>
+          <button class="btn-primary" onclick="showPage('quote')">Get My Free Bin Clean Quote →</button>
           <div style="margin-top:20px;font-size:.85rem;color:var(--gray);">📞 Or call us: <a href="tel:0400000000" style="color:var(--green);font-weight:600;">0400 000 000</a></div>
         </div>
         <div>
           <div style="background:white;border-radius:20px;padding:28px;border:1px solid #e8f5e9;">
-            <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:18px;">What's Included in Every Clean</h3>
-            <div class="check-item"><div class="check-dot">✓</div> Inside & outside of bin</div>
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:18px;">What's Included in Every Bin Clean</h3>
+            <div class="check-item"><div class="check-dot">✓</div> Inside & outside of bin fully cleaned</div>
             <div class="check-item"><div class="check-dot">✓</div> Lid and handles sanitised</div>
-            <div class="check-item"><div class="check-dot">✓</div> Eco deodoriser applied</div>
+            <div class="check-item"><div class="check-dot">✓</div> Eco-friendly deodoriser applied</div>
             <div class="check-item"><div class="check-dot">✓</div> Bin returned to your property</div>
-            <div class="check-item"><div class="check-dot">✓</div> Scheduled on collection day</div>
-            <div class="check-item"><div class="check-dot">✓</div> General rubbish (120L & 240L bins)</div>
+            <div class="check-item"><div class="check-dot">✓</div> Scheduled on Perth council collection day</div>
+            <div class="check-item"><div class="check-dot">✓</div> General rubbish bins (120L & 240L)</div>
             <div class="check-item"><div class="check-dot">✓</div> Recycling & green waste bins available</div>
           </div>
         </div>
@@ -339,11 +377,11 @@
   <div class="page-hero">
     <div class="page-hero-inner">
       <div>
-        <div class="section-label">🏠 End of Lease</div>
-        <h1>End of Lease Cleaning<br>Done Right</h1>
-        <p>Moving out? Our thorough end-of-lease clean follows REIWA standards to help you get your full bond back — guaranteed.</p>
+        <div class="section-label">🏠 End of Lease Cleaning Perth</div>
+        <h1>End of Lease, Move Out Cleaning<br>& Affordable Bond Cleaning Perth</h1>
+        <p>Moving out in Perth? Perth Eco Clean Co. provides <strong>professional end of lease cleaning</strong>, <strong>move out cleaning</strong>, and <strong>affordable bond cleaning</strong> across all Perth suburbs. Our REIWA-standard <strong>bond cleaning Perth</strong> gives you the best chance of getting your full bond back — guaranteed. <strong>Same day cleaners</strong> and <strong>emergency cleaning</strong> available.</p>
         <div style="margin-top:24px;display:flex;gap:14px;flex-wrap:wrap;">
-          <button class="btn-primary" onclick="showPage('quote')">Get a Lease Clean Quote</button>
+          <button class="btn-primary" onclick="showPage('quote')">Get a Bond Clean Quote</button>
           <button class="btn-outline" onclick="showPage('contact')">Contact Us</button>
         </div>
       </div>
@@ -355,15 +393,15 @@
     <div class="container">
       <div class="two-col">
         <div>
-          <div class="section-label">Bond-Back Guarantee</div>
-          <h2 class="section-title">We Clean to Your Property Manager's Standard</h2>
-          <p style="font-size:.95rem;color:var(--gray);line-height:1.7;margin-bottom:20px;">We follow Real Estate Institute of Western Australia (REIWA) cleaning standards so you can move out with complete confidence. Every room, every surface, every detail.</p>
-          <p style="font-size:.95rem;color:var(--gray);line-height:1.7;margin-bottom:28px;">Our team is experienced in what property managers look for, and we won't sign off until the property is immaculate.</p>
+          <div class="section-label">Affordable Bond Cleaning & Move Out Cleaning Perth</div>
+          <h2 class="section-title">Perth's Most Affordable Bond & Move Out Cleaning</h2>
+          <p style="font-size:.95rem;color:var(--gray);line-height:1.7;margin-bottom:20px;">Our <strong>move out cleaning</strong> and <strong>affordable bond cleaning</strong> in Perth follows REIWA standards precisely — the same checklist your property manager uses. Whether it's a full <strong>house cleaning</strong>, unit, or townhouse, our <strong>professional cleaners</strong> leave every surface immaculate so you can walk away with your full bond.</p>
+          <p style="font-size:.95rem;color:var(--gray);line-height:1.7;margin-bottom:28px;">Need to <strong>book a cleaning service</strong> urgently? We offer <strong>same day cleaners</strong> and <strong>emergency cleaning</strong> for urgent <strong>move out cleaning</strong> situations across all Perth suburbs. Our team knows exactly what Perth property managers look for during vacate inspections.</p>
           <div class="guarantee">
             <div class="gi">🛡️</div>
             <div>
-              <h4>Our Bond-Back Promise</h4>
-              <p>If your property manager is not satisfied, we'll return and re-clean the affected areas at no extra charge.</p>
+              <h4>Our Bond Back Guarantee</h4>
+              <p>If your Perth property manager isn't satisfied with our <strong>bond cleaning</strong>, we'll return and re-clean at no extra charge.</p>
             </div>
           </div>
           <div style="margin-top:24px;">
@@ -371,16 +409,18 @@
           </div>
         </div>
         <div class="checklist-box">
-          <h3>✅ Full Clean Checklist</h3>
+          <h3>✅ End of Lease Clean Checklist</h3>
           <div class="check-item"><div class="check-dot">✓</div> Kitchen — oven, stovetop, rangehood, benchtops</div>
+          <div class="check-item"><div class="check-dot">✓</div> Oven & BBQ cleaning (if applicable)</div>
           <div class="check-item"><div class="check-dot">✓</div> Bathrooms — toilets, tiles, mirrors, fixtures</div>
           <div class="check-item"><div class="check-dot">✓</div> All bedrooms — vacuuming, mopping, surfaces</div>
-          <div class="check-item"><div class="check-dot">✓</div> Living & dining areas — full deep clean</div>
-          <div class="check-item"><div class="check-dot">✓</div> Windows — interior glass & tracks</div>
+          <div class="check-item"><div class="check-dot">✓</div> Living & dining areas — full house cleaning</div>
+          <div class="check-item"><div class="check-dot">✓</div> Window cleaning — interior glass & tracks</div>
+          <div class="check-item"><div class="check-dot">✓</div> Curtain cleaning (on request)</div>
           <div class="check-item"><div class="check-dot">✓</div> Walls — spot clean marks & scuffs</div>
           <div class="check-item"><div class="check-dot">✓</div> Skirting boards & light switches</div>
           <div class="check-item"><div class="check-dot">✓</div> Laundry — machine, tub, dryer area</div>
-          <div class="check-item"><div class="check-dot">✓</div> Garage & outdoor areas (on request)</div>
+          <div class="check-item"><div class="check-dot">✓</div> Driveway cleaning & garage (on request)</div>
           <div class="check-item"><div class="check-dot">✓</div> Carpet steam cleaning (optional add-on)</div>
         </div>
       </div>
@@ -389,14 +429,14 @@
 
   <div class="section" style="background:var(--off-white);">
     <div class="container centered">
-      <div class="section-label">Why Choose Us</div>
-      <h2 class="section-title">The Smartest Move You'll Make</h2>
-      <p class="section-desc" style="margin-bottom:36px;">End of lease cleaning is stressful. We take that stress away completely.</p>
+      <div class="section-label">Why Choose Our Bond & Move Out Cleaning Perth</div>
+      <h2 class="section-title">Perth's Best Move Out & Affordable Bond Cleaning</h2>
+      <p class="section-desc" style="margin-bottom:36px;">From <strong>affordable bond cleaning</strong> to full <strong>move out cleaning</strong>, Perth Eco Clean Co. is the trusted choice for Perth tenants and landlords — with <strong>same day cleaners</strong> and <strong>emergency cleaning</strong> available when time is critical.</p>
       <div class="features-grid">
-        <div class="feature-card"><div class="fi">📋</div><h4>REIWA Standard Clean</h4><p>We follow the exact checklist that Perth property managers use to assess properties.</p></div>
-        <div class="feature-card"><div class="fi">⏱️</div><h4>Fast Turnaround</h4><p>We work around your moving timeline. Early mornings and weekends available on request.</p></div>
-        <div class="feature-card"><div class="fi">🧴</div><h4>Professional-Grade Products</h4><p>Commercial-strength, eco-safe cleaning products that get the tough jobs done.</p></div>
-        <div class="feature-card"><div class="fi">🔄</div><h4>Re-clean Guarantee</h4><p>If anything is flagged, we come back. No extra charge, no arguments.</p></div>
+        <div class="feature-card"><div class="fi">💰</div><h4>Affordable Bond Cleaning Perth</h4><p>Our <strong>affordable bond cleaning</strong> meets REIWA standards without the premium price tag — giving you the best value move out clean in Perth.</p></div>
+        <div class="feature-card"><div class="fi">🚨</div><h4>Emergency & Same Day Cleaners</h4><p>Need <strong>emergency cleaning</strong> or <strong>same day cleaners</strong> for an urgent vacate? We're ready to <strong>book your cleaning service</strong> with fast turnaround across Perth.</p></div>
+        <div class="feature-card"><div class="fi">🧴</div><h4>Professional-Grade Eco Products</h4><p>Commercial-strength, eco-safe products used by our <strong>professional cleaners</strong> to deliver a spotless <strong>move out cleaning</strong> result every time.</p></div>
+        <div class="feature-card"><div class="fi">🔄</div><h4>Bond Back Re-Clean Guarantee</h4><p>If your agent flags anything after our <strong>affordable bond cleaning</strong>, we return at no extra cost. No arguments, no fuss.</p></div>
       </div>
     </div>
   </div>
@@ -407,9 +447,9 @@
   <div class="page-hero">
     <div class="page-hero-inner">
       <div>
-        <div class="section-label">🧹 All Services</div>
-        <h1>Everything We Offer</h1>
-        <p>Currently specialising in bin cleaning and end-of-lease cleans, with exciting new services launching soon across Perth.</p>
+        <div class="section-label">🧹 All Cleaning Services Perth</div>
+        <h1>Professional Cleaning<br>Services in Perth</h1>
+        <p>Perth Eco Clean Co. — the <strong>best cleaners in Perth WA</strong>. Currently offering <strong>bin cleaning service</strong> and <strong>end of lease cleaning</strong>, with <strong>window cleaning</strong>, <strong>curtain cleaning</strong>, <strong>pressure washing</strong>, <strong>driveway cleaning</strong>, <strong>weekly house cleaning</strong>, and <strong>oven and BBQ cleaning</strong> coming very soon. <strong>Same day cleaners</strong> and <strong>emergency cleaning</strong> available now.</p>
       </div>
       <div class="page-hero-icon">🧹</div>
     </div>
@@ -421,25 +461,57 @@
       <div class="services-grid" style="margin-bottom:50px;">
         <div class="svc-card" onclick="showPage('bin')">
           <div class="svc-icon">🗑️</div>
-          <h3>Residential Bin Cleaning</h3>
-          <p>High-pressure hot wash and deodorise of your wheelie bins on council collection day.</p>
+          <h3>Wheelie Bin Cleaning Perth</h3>
+          <p>Professional <strong>bin cleaning service</strong> — high-pressure hot wash and eco-deodorise on your council collection day. <strong>Book your cleaning service</strong> today.</p>
           <div class="view-more">Learn more →</div>
         </div>
         <div class="svc-card" onclick="showPage('lease')">
           <div class="svc-icon">🏠</div>
-          <h3>End of Lease Cleaning</h3>
-          <p>Comprehensive bond-back clean following REIWA standards. We won't leave until it's perfect.</p>
+          <h3>End of Lease, Move Out & Bond Cleaning Perth</h3>
+          <p>Comprehensive <strong>move out cleaning</strong> and <strong>affordable bond cleaning</strong> to REIWA standards. <strong>Same day cleaners</strong> and <strong>emergency cleaning</strong> available.</p>
           <div class="view-more">Learn more →</div>
         </div>
       </div>
 
-      <h2 class="section-title" style="margin-bottom:10px;">Coming Soon</h2>
-      <p style="font-size:.9rem;color:var(--gray);margin-bottom:28px;">We're expanding! These services are launching soon across Perth.</p>
+      <h2 class="section-title" style="margin-bottom:10px;">Coming Soon to Perth</h2>
+      <p style="font-size:.9rem;color:var(--gray);margin-bottom:28px;">We're expanding our <strong>professional cleaning services</strong> across Perth. These services are launching soon — <strong>book your cleaning service</strong> interest below!</p>
       <div class="services-grid">
-        <div class="svc-card inactive"><div class="svc-icon">🔥</div><h3>BBQ & Grill Cleaning</h3><p>Deep degrease and sanitise of outdoor BBQs and grills for safe, clean cooking.</p><span class="coming-soon">Coming Soon</span></div>
-        <div class="svc-card inactive"><div class="svc-icon">💧</div><h3>Pressure Wash Driveways</h3><p>Blast away dirt, oil stains, mould and grime from driveways, paths, and outdoor areas.</p><span class="coming-soon">Coming Soon</span></div>
-        <div class="svc-card inactive"><div class="svc-icon">🌿</div><h3>Lawn Mowing</h3><p>Regular mowing and edge trimming to keep your yard looking neat year-round.</p><span class="coming-soon">Coming Soon</span></div>
-        <div class="svc-card inactive"><div class="svc-icon">🪟</div><h3>Window Cleaning</h3><p>Interior and exterior window cleans leaving streak-free, crystal-clear glass.</p><span class="coming-soon">Coming Soon</span></div>
+        <div class="svc-card inactive">
+          <div class="svc-icon">🪟</div>
+          <h3>Window Cleaning Perth</h3>
+          <p>Professional interior and exterior <strong>window cleaning</strong> service across all Perth suburbs — streak-free, crystal-clear results guaranteed.</p>
+          <span class="coming-soon">Coming Soon</span>
+        </div>
+        <div class="svc-card inactive">
+          <div class="svc-icon">🪡</div>
+          <h3>Curtain Cleaning Perth</h3>
+          <p>Professional <strong>curtain cleaning</strong> service — gentle yet thorough cleaning for all curtain and blind types across Perth homes and rentals.</p>
+          <span class="coming-soon">Coming Soon</span>
+        </div>
+        <div class="svc-card inactive">
+          <div class="svc-icon">📅</div>
+          <h3>Weekly House Cleaning Perth</h3>
+          <p>Regular <strong>weekly house cleaning</strong> to keep your Perth home consistently spotless — flexible schedules tailored to your lifestyle.</p>
+          <span class="coming-soon">Coming Soon</span>
+        </div>
+        <div class="svc-card inactive">
+          <div class="svc-icon">🔥</div>
+          <h3>Oven & BBQ Cleaning / Grill Cleaning Service</h3>
+          <p>Professional <strong>oven and BBQ cleaning</strong> and <strong>grill cleaning service</strong> — deep degrease and eco-sanitise for safe, clean cooking.</p>
+          <span class="coming-soon">Coming Soon</span>
+        </div>
+        <div class="svc-card inactive">
+          <div class="svc-icon">💧</div>
+          <h3>Pressure Washing & Driveway Cleaning</h3>
+          <p>Professional <strong>pressure washing</strong> and <strong>driveway cleaning</strong> — blast away dirt, oil stains, mould, and grime from all outdoor surfaces.</p>
+          <span class="coming-soon">Coming Soon</span>
+        </div>
+        <div class="svc-card inactive">
+          <div class="svc-icon">🏢</div>
+          <h3>Commercial Cleaning Perth</h3>
+          <p>Reliable <strong>commercial cleaning</strong> for Perth offices, retail spaces, and businesses — flexible scheduling and competitive rates.</p>
+          <span class="coming-soon">Coming Soon</span>
+        </div>
       </div>
     </div>
   </div>
@@ -450,30 +522,29 @@
   <div class="page-hero">
     <div class="page-hero-inner">
       <div>
-        <div class="section-label">👋 About Us</div>
-        <h1>We're a Perth-Based<br>Local Business</h1>
-        <p>Founded with one goal — make Perth homes cleaner and Perth lives easier. We're a locally owned and operated business proud to serve our community.</p>
+        <div class="section-label">👋 About Perth Eco Clean Co.</div>
+        <h1>Perth's Locally Owned<br>Professional Cleaning Service</h1>
+        <p>We are <strong>local cleaners near you</strong> in Perth — providing <strong>affordable cleaning services</strong> for residential and commercial customers across all Perth suburbs.</p>
       </div>
       <div class="page-hero-icon">🌱</div>
     </div>
   </div>
-
   <div class="section">
     <div class="container">
       <div class="two-col">
         <div class="about-visual">
           <div style="font-size:80px;margin-bottom:16px;">🌱</div>
           <p style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--dark);">"Clean spaces. Happier lives."</p>
-          <p style="font-size:.85rem;color:var(--gray);margin-top:8px;">Perth Eco Clean Co. — built by a local, for locals.</p>
+          <p style="font-size:.85rem;color:var(--gray);margin-top:8px;">Perth Eco Clean Co. — your local professional cleaners.</p>
         </div>
         <div>
-          <p style="font-size:.95rem;color:var(--gray);line-height:1.7;margin-bottom:20px;">Perth Eco Clean Co. was founded with one simple goal — to make your home cleaner and your life easier. We're a locally owned and operated business, proud to serve the Perth community with honest, reliable, and professional cleaning services.</p>
-          <p style="font-size:.95rem;color:var(--gray);line-height:1.7;margin-bottom:28px;">We started with residential bin cleaning — one of Perth's most overlooked but essential home services — and expanded to end-of-lease cleaning. We're growing steadily, with more services launching soon.</p>
+          <p style="font-size:.95rem;color:var(--gray);line-height:1.7;margin-bottom:20px;"><strong>Perth Eco Clean Co.</strong> is a locally owned and operated <strong>professional cleaning service</strong> based in Perth, WA. We provide <strong>affordable cleaning services</strong> to both <strong>residential</strong> and <strong>commercial</strong> customers, covering everything from <strong>house cleaning</strong> to <strong>end of lease cleaning</strong>, <strong>bond back cleaning</strong>, and <strong>wheelie bin cleaning</strong>.</p>
+          <p style="font-size:.95rem;color:var(--gray);line-height:1.7;margin-bottom:28px;">As true <strong>local cleaners near you</strong> in Perth, we understand what Perth homeowners and tenants need. We started with our <strong>bin cleaning service</strong> and grew to offer full <strong>end of lease</strong> and <strong>bond cleaning</strong>. Coming soon: <strong>window cleaning</strong>, <strong>pressure washing</strong>, <strong>driveway cleaning</strong>, <strong>curtain cleaning</strong>, <strong>oven and BBQ cleaning</strong>, and <strong>commercial cleaning</strong>.</p>
           <div class="about-values">
-            <div class="about-value"><div class="value-dot"></div><div><h4>Locally Owned & Operated</h4><p>We live and work in Perth. When you support us, you support a local business.</p></div></div>
-            <div class="about-value"><div class="value-dot"></div><div><h4>Eco-Friendly Approach</h4><p>We use environmentally safe products that are tough on dirt but gentle on the planet.</p></div></div>
-            <div class="about-value"><div class="value-dot"></div><div><h4>Reliability You Can Count On</h4><p>We show up when we say we will. No cancellations. No excuses.</p></div></div>
-            <div class="about-value"><div class="value-dot"></div><div><h4>Community-First Mindset</h4><p>Perth is our home. We're committed to giving back and doing right by our customers.</p></div></div>
+            <div class="about-value"><div class="value-dot"></div><div><h4>Local Cleaners Near You</h4><p>We're genuinely local to Perth — fast response times, <strong>same day cleaning</strong> availability, and a team that knows your suburb.</p></div></div>
+            <div class="about-value"><div class="value-dot"></div><div><h4>Affordable Cleaning Services</h4><p>We keep our <strong>professional cleaning</strong> prices fair and transparent so every Perth household can access a quality clean.</p></div></div>
+            <div class="about-value"><div class="value-dot"></div><div><h4>Residential & Commercial Cleaning</h4><p>From <strong>house cleaning</strong> to <strong>commercial cleaning</strong> — we handle all property types with the same professional standard.</p></div></div>
+            <div class="about-value"><div class="value-dot"></div><div><h4>100% Eco-Friendly Approach</h4><p>All our <strong>cleaning services</strong> use environmentally safe, biodegradable products — tough on dirt, gentle on Perth's environment.</p></div></div>
           </div>
         </div>
       </div>
@@ -487,49 +558,64 @@
     <div class="page-hero-inner">
       <div>
         <div class="section-label">❓ FAQ</div>
-        <h1>Frequently Asked<br>Questions</h1>
-        <p>Everything you need to know about our services. Can't find an answer? Give us a call or send us a message.</p>
+        <h1>Frequently Asked Questions<br>About Our Perth Cleaning Services</h1>
+        <p>Everything you need to know about our <strong>professional cleaning services</strong> in Perth — from <strong>bin cleaning</strong> to <strong>bond back cleaning</strong> and beyond.</p>
       </div>
       <div class="page-hero-icon">❓</div>
     </div>
   </div>
-
   <div class="section">
     <div class="faq-wrap">
       <div class="faq-item open">
-        <div class="faq-q" onclick="toggleFaq(this)">How does the bin cleaning service work?<div class="faq-toggle">+</div></div>
-        <div class="faq-a">We schedule your bin clean on the same day as your council rubbish collection. Once your bins have been emptied, our team arrives, gives them a thorough high-pressure hot water clean, applies an eco-friendly deodoriser, and returns them to your property — all within the same day.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">Are you the best cleaners in Perth WA?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">We're proud to be rated among the <strong>best cleaners in Perth WA</strong> by our customers. We combine professional-grade equipment, eco-friendly products, reliable service, and <strong>affordable cleaning prices</strong> to deliver an outstanding result every time — whether it's a <strong>bin cleaning service</strong>, <strong>end of lease cleaning</strong>, <strong>move out cleaning</strong>, or <strong>weekly house cleaning</strong>.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">How often should I get my bins cleaned?<div class="faq-toggle">+</div></div>
-        <div class="faq-a">For most households, a monthly clean is sufficient. If you have a large family or generate a lot of food waste, a fortnightly clean is recommended. We offer both options at affordable rates.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">How do I book a cleaning service with Perth Eco Clean Co.?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">It's easy to <strong>book your cleaning service</strong> with us! Simply fill out our free quote form on this website, call us on 0400 000 000, or send us an email. We'll get back to you within 24 hours to confirm your booking. For <strong>same day cleaners</strong> or <strong>emergency cleaning</strong>, please call us directly for the fastest response.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Will the end of lease clean guarantee my bond back?<div class="faq-toggle">+</div></div>
-        <div class="faq-a">We follow REIWA standards and our clean is designed to meet property manager expectations. If anything is flagged by your agent, we'll return and re-clean those areas at no extra charge. While we can't guarantee the actions of your property manager, we stand behind the quality of our work.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">Do you offer emergency cleaning and same day cleaners in Perth?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">Yes! We offer <strong>emergency cleaning</strong> and <strong>same day cleaners</strong> across Perth for urgent situations — whether it's a last-minute <strong>move out cleaning</strong>, unexpected rental inspection, or an urgent <strong>affordable bond cleaning</strong> job. Call us directly on 0400 000 000 for the fastest response.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Do I need to be home during the clean?<div class="faq-toggle">+</div></div>
-        <div class="faq-a">For bin cleaning, you don't need to be home at all — just leave your bins out after collection and we'll do the rest. For end of lease cleans, we recommend you or your representative be available, though it is not always required.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">Do you offer weekly house cleaning in Perth?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">Our <strong>weekly house cleaning</strong> service is coming soon to Perth! We'll offer regular scheduled <strong>house cleaning</strong> on a weekly, fortnightly, or monthly basis — keeping your Perth home consistently spotless. Fill out our quote form to register your interest and be first to <strong>book your cleaning service</strong> when it launches.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">What areas in Perth do you service?<div class="faq-toggle">+</div></div>
-        <div class="faq-a">We currently service Perth and surrounding suburbs. If you're unsure whether we cover your area, please contact us or fill out the quote form and we'll let you know right away.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">Do you offer same day cleaning in Perth?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">Yes! We offer <strong>same day cleaning</strong> across Perth for both our <strong>bin cleaning service</strong> and <strong>end of lease cleaning</strong>, subject to availability. If you need urgent <strong>affordable cleaning services</strong>, call us on 0400 000 000 and we'll do our best to accommodate you the same day.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Do you use eco-friendly products?<div class="faq-toggle">+</div></div>
-        <div class="faq-a">Yes! All our cleaning products are environmentally safe and biodegradable. We care about the Perth environment and always choose products that are effective without harming your family or the earth.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">How does your wheelie bin cleaning service work?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">Our <strong>wheelie bin cleaning</strong> is scheduled on your Perth council collection day. Once your bins are emptied, our <strong>professional cleaners</strong> arrive, hot-wash them with high-pressure equipment, apply an eco-friendly deodoriser, and return them to your property — all the same day.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">How do I pay?<div class="faq-toggle">+</div></div>
-        <div class="faq-a">We accept bank transfer, cash, and major credit/debit cards. For regular service plans, we can arrange a simple monthly payment. Details will be confirmed at the time of booking.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">Will your bond cleaning Perth service guarantee my bond back?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">Our <strong>bond back cleaning</strong> follows REIWA standards to meet property manager expectations. If your agent flags anything after our <strong>end of lease cleaning</strong>, we return and re-clean at no extra charge. We're one of Perth's most trusted <strong>professional cleaners</strong> for bond and vacate cleans.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Can I bundle bin cleaning with end of lease?<div class="faq-toggle">+</div></div>
-        <div class="faq-a">Absolutely! We offer bundle deals for customers who need both services. Select "Bundle" in the quote form and we'll put together a combined price for you.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">Do you provide residential and commercial cleaning in Perth?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">Yes! We offer both <strong>residential cleaning</strong> (including <strong>house cleaning</strong>, <strong>end of lease cleaning</strong>, and <strong>bin cleaning service</strong>) and <strong>commercial cleaning</strong> across Perth. Our <strong>commercial cleaning</strong> services are launching soon — contact us to register your interest.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Are you local cleaners near me in Perth?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">Yes! We are genuinely <strong>local cleaners</strong> based in Perth, WA, serving all Perth metropolitan suburbs. Whether you're searching for <strong>local cleaners near me</strong> in Joondalup, Fremantle, Rockingham, or anywhere in between — we're your local team.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Are your cleaning services affordable?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">Absolutely. We pride ourselves on offering some of Perth's most <strong>affordable cleaning services</strong> without compromising on quality. Whether you need a <strong>bin cleaning service</strong>, <strong>house cleaning</strong>, or full <strong>bond cleaning Perth</strong>, our pricing is transparent with no hidden fees.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Do you offer window cleaning, driveway cleaning or pressure washing in Perth?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">These <strong>cleaning services</strong> are currently coming soon! We're launching <strong>window cleaning</strong>, <strong>driveway cleaning</strong>, <strong>pressure washing</strong>, <strong>curtain cleaning</strong>, and <strong>oven and BBQ cleaning</strong> across Perth very shortly. Fill out our quote form to be notified when these services go live.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Can I bundle bin cleaning with end of lease cleaning?<div class="faq-toggle">+</div></div>
+        <div class="faq-a">Absolutely! We offer bundle deals combining our <strong>bin cleaning service</strong> and <strong>end of lease cleaning</strong> in Perth. Select "Bundle" in the quote form and we'll put together a combined price for our <strong>affordable cleaning services</strong>.</div>
       </div>
       <div style="text-align:center;margin-top:36px;">
-        <p style="font-size:.9rem;color:var(--gray);margin-bottom:16px;">Still have a question?</p>
+        <p style="font-size:.9rem;color:var(--gray);margin-bottom:16px;">Still have questions about our Perth cleaning services?</p>
         <button class="btn-primary" onclick="showPage('contact')">Contact Us</button>
       </div>
     </div>
@@ -541,24 +627,24 @@
   <div class="page-hero">
     <div class="page-hero-inner">
       <div>
-        <div class="section-label">💬 Free Quote</div>
-        <h1>Get Your Free Quote</h1>
-        <p>Tell us what you need and we'll get back to you within 24 hours with a tailored quote — no obligation, no hidden fees.</p>
+        <div class="section-label">💬 Free Quote — Cleaning Services Perth</div>
+        <h1>Get Your Free Perth<br>Cleaning Services Quote</h1>
+        <p>Request a free quote for any of our <strong>cleaning services in Perth</strong> — from <strong>wheelie bin cleaning</strong> and <strong>end of lease cleaning</strong> to <strong>bond back cleaning</strong>. We reply within 24 hours. <strong>Same day cleaning</strong> available on request.</p>
       </div>
       <div class="page-hero-icon">📋</div>
     </div>
   </div>
-
   <div class="section">
     <div class="quote-grid">
       <div class="quote-info">
-        <h3>Why Get a Quote?</h3>
-        <p>Every home is different. We tailor pricing to your specific needs so you only pay for what you actually require.</p>
-        <div class="qi-row"><div class="qi-icon">✅</div><div><h5>No Obligation</h5><span>Getting a quote is completely free</span></div></div>
+        <h3>Why Get a Cleaning Quote?</h3>
+        <p>Every Perth property is different. Our <strong>professional cleaners</strong> tailor pricing for every <strong>cleaning service</strong> — so you only pay for what you actually need.</p>
+        <div class="qi-row"><div class="qi-icon">✅</div><div><h5>No Obligation</h5><span>Free quotes for all Perth cleaning services</span></div></div>
         <div class="qi-row"><div class="qi-icon">⚡</div><div><h5>Fast Response</h5><span>We reply within 24 hours</span></div></div>
-        <div class="qi-row"><div class="qi-icon">💚</div><div><h5>Personalised Pricing</h5><span>Tailored to your home & needs</span></div></div>
+        <div class="qi-row"><div class="qi-icon">💚</div><div><h5>Affordable Pricing</h5><span>Competitive rates for every cleaning service</span></div></div>
+        <div class="qi-row"><div class="qi-icon">🏃</div><div><h5>Same Day Cleaning Available</h5><span>Urgent jobs welcome — call us direct</span></div></div>
         <div style="border-top:1px solid rgba(255,255,255,.2);padding-top:18px;margin-top:8px;">
-          <div style="font-size:.78rem;opacity:.7;margin-bottom:6px;">Prefer to call?</div>
+          <div style="font-size:.78rem;opacity:.7;margin-bottom:6px;">Prefer to call your local cleaners?</div>
           <a href="tel:0400000000" style="color:white;font-weight:700;font-size:1rem;text-decoration:none;">📞 0400 000 000</a>
         </div>
       </div>
@@ -572,26 +658,36 @@
           <div class="form-group"><label>Email *</label><input type="email" placeholder="john@email.com" id="q-email"></div>
         </div>
         <div class="form-group">
-          <label>Service Required *</label>
+          <label>Cleaning Service Required *</label>
           <select id="q-service">
-            <option value="">— Select a service —</option>
-            <option>Bin Cleaning — One-Off</option>
-            <option>Bin Cleaning — Regular Schedule</option>
-            <option>End of Lease Cleaning</option>
-            <option>Bin Cleaning + End of Lease (Bundle)</option>
+            <option value="">— Select a cleaning service —</option>
+            <option>Bin Cleaning Service — One-Off</option>
+            <option>Wheelie Bin Cleaning — Regular Schedule</option>
+            <option>End of Lease Cleaning Perth</option>
+            <option>Bond Cleaning Perth</option>
+            <option>Bond Back Cleaning</option>
+            <option>House Cleaning / Residential Cleaning</option>
+            <option>Same Day Cleaning</option>
+            <option>Bin Cleaning + End of Lease Bundle</option>
+            <option>Window Cleaning (Notify When Available)</option>
+            <option>Pressure Washing / Driveway Cleaning (Notify)</option>
+            <option>Curtain Cleaning (Notify When Available)</option>
+            <option>Oven & BBQ / Grill Cleaning (Notify)</option>
+            <option>Commercial Cleaning Perth (Notify)</option>
             <option>Other / Not Sure</option>
           </select>
         </div>
-        <div class="form-group"><label>Suburb / Area *</label><input type="text" placeholder="e.g. Joondalup, Fremantle..." id="q-suburb"></div>
+        <div class="form-group"><label>Perth Suburb / Area *</label><input type="text" placeholder="e.g. Joondalup, Fremantle, Rockingham..." id="q-suburb"></div>
         <div class="form-group">
           <label>Property Type</label>
           <select id="q-property">
             <option value="">— Select —</option>
-            <option>House</option><option>Apartment / Unit</option><option>Townhouse</option><option>Other</option>
+            <option>House</option><option>Apartment / Unit</option><option>Townhouse</option>
+            <option>Commercial Property</option><option>Other</option>
           </select>
         </div>
-        <div class="form-group"><label>Additional Details</label><textarea placeholder="Number of bins, bedrooms, preferred date, special requirements..." id="q-msg"></textarea></div>
-        <button class="btn-primary" style="width:100%;font-size:.95rem;padding:15px;" onclick="submitQuote()">Request My Free Quote →</button>
+        <div class="form-group"><label>Additional Details</label><textarea placeholder="Number of bins, bedrooms, preferred date, same day cleaning needed, special requirements..." id="q-msg"></textarea></div>
+        <button class="btn-primary" style="width:100%;font-size:.95rem;padding:15px;" onclick="submitQuote()">Request My Free Cleaning Quote →</button>
         <div class="success-msg" id="quoteSuccess">✅ Quote request sent! We'll be in touch within 24 hours.</div>
       </div>
     </div>
@@ -603,24 +699,23 @@
   <div class="page-hero">
     <div class="page-hero-inner">
       <div>
-        <div class="section-label">📞 Contact</div>
-        <h1>Get in Touch</h1>
-        <p>We're always happy to hear from you. Reach out via phone, email, or fill out our quote form and we'll get right back to you.</p>
+        <div class="section-label">📞 Contact Your Local Perth Cleaners</div>
+        <h1>Contact Perth Eco Clean Co.<br>Your Local Cleaning Experts</h1>
+        <p>Get in touch for any <strong>cleaning service in Perth</strong> — <strong>bin cleaning</strong>, <strong>end of lease cleaning</strong>, <strong>bond cleaning</strong>, <strong>house cleaning</strong>, or to register interest in upcoming services like <strong>window cleaning</strong>, <strong>pressure washing</strong>, and <strong>driveway cleaning</strong>.</p>
       </div>
       <div class="page-hero-icon">📞</div>
     </div>
   </div>
-
   <div class="section">
     <div class="container">
       <div class="contact-cards">
-        <div class="cc"><div class="ci">📞</div><h4>Call Us</h4><p><a href="tel:0400000000">0400 000 000</a></p><p style="margin-top:4px;font-size:.78rem;">Mon–Sat, 7am–6pm</p></div>
+        <div class="cc"><div class="ci">📞</div><h4>Call Your Local Cleaners</h4><p><a href="tel:0400000000">0400 000 000</a></p><p style="margin-top:4px;font-size:.78rem;">Mon–Sat, 7am–6pm</p></div>
         <div class="cc"><div class="ci">📧</div><h4>Email Us</h4><p><a href="mailto:info@perthecleaningco.com.au">info@perthecleaningco.com.au</a></p></div>
-        <div class="cc"><div class="ci">📍</div><h4>Location</h4><p>Perth, Western Australia</p><p style="margin-top:4px;font-size:.78rem;">Serving all Perth suburbs</p></div>
+        <div class="cc"><div class="ci">📍</div><h4>Service Area</h4><p>All Perth Suburbs, WA</p><p style="margin-top:4px;font-size:.78rem;">Residential & Commercial</p></div>
       </div>
       <div style="text-align:center;margin-top:10px;">
-        <p style="font-size:.9rem;color:var(--gray);margin-bottom:18px;">Want a price? Fill out our quick quote form.</p>
-        <button class="btn-primary" onclick="showPage('quote')">Get a Free Quote →</button>
+        <p style="font-size:.9rem;color:var(--gray);margin-bottom:18px;">Need <strong>affordable cleaning services</strong> in Perth? Get a free quote from your local professional cleaners.</p>
+        <button class="btn-primary" onclick="showPage('quote')">Get a Free Cleaning Quote →</button>
       </div>
     </div>
   </div>
@@ -634,33 +729,36 @@
         <div class="logo-icon">🌿</div>
         <div class="logo-text" style="color:white;">Perth <span>Eco Clean</span><br>Co.</div>
       </div>
-      <p>Perth's trusted local cleaning service. From wheelie bins to end-of-lease cleans. Proudly serving the Perth community.</p>
+      <p>Perth Eco Clean Co. — <strong style="color:#aaa;">affordable professional cleaning services</strong> across all Perth suburbs. Local cleaners near you for <strong style="color:#aaa;">bin cleaning</strong>, <strong style="color:#aaa;">end of lease cleaning</strong>, <strong style="color:#aaa;">bond cleaning</strong>, and more.</p>
     </div>
     <div class="footer-col">
-      <h4>Pages</h4>
+      <h4>Our Cleaning Services</h4>
       <ul>
-        <li><a onclick="showPage('home')">Home</a></li>
-        <li><a onclick="showPage('bin')">Bin Cleaning</a></li>
-        <li><a onclick="showPage('lease')">End of Lease</a></li>
-        <li><a onclick="showPage('services')">All Services</a></li>
-        <li><a onclick="showPage('about')">About Us</a></li>
-        <li><a onclick="showPage('faq')">FAQ</a></li>
-        <li><a onclick="showPage('contact')">Contact</a></li>
+        <li><a onclick="showPage('bin')">Bin Cleaning Service Perth</a></li>
+        <li><a onclick="showPage('bin')">Wheelie Bin Cleaning Perth</a></li>
+        <li><a onclick="showPage('lease')">End of Lease Cleaning Perth</a></li>
+        <li><a onclick="showPage('lease')">Bond Cleaning Perth</a></li>
+        <li><a onclick="showPage('lease')">Bond Back Cleaning Perth</a></li>
+        <li><a onclick="showPage('services')">House Cleaning Perth</a></li>
+        <li><a onclick="showPage('services')">Residential Cleaning Perth</a></li>
+        <li><a onclick="showPage('services')">Commercial Cleaning Perth</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
+      <h4>Coming Soon</h4>
       <ul>
-        <li><a onclick="showPage('bin')">Residential Bin Cleaning</a></li>
-        <li><a onclick="showPage('lease')">End of Lease Cleaning</a></li>
-        <li><a onclick="showPage('services')">BBQ Cleaning (Soon)</a></li>
-        <li><a onclick="showPage('services')">Pressure Washing (Soon)</a></li>
-        <li><a onclick="showPage('services')">Lawn Mowing (Soon)</a></li>
+        <li><a onclick="showPage('services')">Window Cleaning Perth</a></li>
+        <li><a onclick="showPage('services')">Pressure Washing Perth</a></li>
+        <li><a onclick="showPage('services')">Driveway Cleaning Perth</a></li>
+        <li><a onclick="showPage('services')">Curtain Cleaning Perth</a></li>
+        <li><a onclick="showPage('services')">Oven & BBQ Cleaning Perth</a></li>
+        <li><a onclick="showPage('services')">Grill Cleaning Service Perth</a></li>
+        <li><a onclick="showPage('services')">Same Day Cleaning Perth</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <div>© 2026 <span style="color:var(--green-mid)">Perth Eco Clean Co.</span> All rights reserved.</div>
+    <div>© 2026 <span style="color:var(--green-mid)">Perth Eco Clean Co.</span> | Professional Cleaning Services Perth, WA</div>
     <div>Made with 💚 in Perth, WA</div>
   </div>
 </footer>
