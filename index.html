@@ -186,7 +186,15 @@
   .footer-col ul a{color:#aaa;text-decoration:none;font-size:.83rem;transition:color .2s;cursor:pointer;}
   .footer-col ul a:hover{color:white;}
   .footer-bottom{border-top:1px solid #2d3d2d;padding-top:22px;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:#777;}
-  /* RESPONSIVE */
+  /* DROPDOWN */
+  .has-dropdown{position:relative;}
+  .has-dropdown>a{display:flex;align-items:center;gap:5px;}
+  .has-dropdown>a::after{content:'▾';font-size:.7rem;margin-top:1px;}
+  .dropdown{display:none;position:absolute;top:calc(100% + 10px);left:0;background:white;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.12);border:1px solid #e0ede0;min-width:200px;z-index:2000;overflow:hidden;}
+  .has-dropdown:hover .dropdown{display:block;}
+  .dropdown a{display:block;padding:11px 18px;text-decoration:none;color:var(--dark);font-size:.85rem;font-weight:500;transition:background .15s;cursor:pointer;border-bottom:1px solid #f0f4f0;}
+  .dropdown a:last-child{border-bottom:none;}
+  .dropdown a:hover{background:var(--green-pale);color:var(--green);}
   @media(max-width:900px){
     .hero-grid,.two-col,.quote-grid{grid-template-columns:1fr;}
     .stats-row{grid-template-columns:1fr 1fr;}
@@ -212,11 +220,16 @@
   </div>
   <ul>
     <li><a onclick="showPage('home')" data-page="home">Home</a></li>
-    <li><a onclick="showPage('bin')" data-page="bin">Bin Cleaning</a></li>
-    <li><a onclick="showPage('lease')" data-page="lease">End of Lease</a></li>
-    <li><a onclick="showPage('house')" data-page="house">House Cleaning</a></li>
-    <li><a onclick="showPage('commercial')" data-page="commercial">Commercial</a></li>
-    <li><a onclick="showPage('services')" data-page="services">Services</a></li>
+    <li class="has-dropdown">
+      <a onclick="showPage('services')" data-page="services">Services</a>
+      <div class="dropdown">
+        <a onclick="showPage('bin')">Bin Cleaning</a>
+        <a onclick="showPage('lease')">End of Lease</a>
+        <a onclick="showPage('house')">House Cleaning</a>
+        <a onclick="showPage('commercial')">Commercial Cleaning</a>
+        <a onclick="showPage('services')">All Services</a>
+      </div>
+    </li>
     <li><a onclick="showPage('about')" data-page="about">About</a></li>
     <li><a onclick="showPage('faq')" data-page="faq">FAQ</a></li>
     <li><a onclick="showPage('contact')" data-page="contact">Contact</a></li>
