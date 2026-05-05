@@ -214,6 +214,8 @@
     <li><a onclick="showPage('home')" data-page="home">Home</a></li>
     <li><a onclick="showPage('bin')" data-page="bin">Bin Cleaning</a></li>
     <li><a onclick="showPage('lease')" data-page="lease">End of Lease</a></li>
+    <li><a onclick="showPage('house')" data-page="house">House Cleaning</a></li>
+    <li><a onclick="showPage('commercial')" data-page="commercial">Commercial</a></li>
     <li><a onclick="showPage('services')" data-page="services">Services</a></li>
     <li><a onclick="showPage('about')" data-page="about">About</a></li>
     <li><a onclick="showPage('faq')" data-page="faq">FAQ</a></li>
@@ -230,6 +232,8 @@
   <a onclick="nav('home')">Home</a>
   <a onclick="nav('bin')">Bin Cleaning</a>
   <a onclick="nav('lease')">End of Lease</a>
+  <a onclick="nav('house')">House Cleaning</a>
+  <a onclick="nav('commercial')">Commercial Cleaning</a>
   <a onclick="nav('services')">All Services</a>
   <a onclick="nav('about')">About Us</a>
   <a onclick="nav('faq')">FAQ</a>
@@ -661,7 +665,7 @@
       <div>
         <div class="section-label">All Cleaning Services Perth</div>
         <h1>Professional Cleaning<br>Services in Perth</h1>
-        <p>Perth Eco Clean Co. currently offers wheelie bin cleaning and end-of-lease cleaning across all Perth suburbs. We are expanding soon to include window cleaning, curtain cleaning, pressure washing, driveway cleaning, weekly house cleaning, and oven and BBQ cleaning.</p>
+        <p>Perth Eco Clean Co. offers four professional cleaning services across all Perth suburbs — wheelie bin cleaning, end-of-lease cleaning, house cleaning, and commercial cleaning. Window cleaning, curtain cleaning, pressure washing, and oven and BBQ cleaning are launching soon.</p>
       </div>
       <div class="page-hero-icon">🧹</div>
     </div>
@@ -683,6 +687,18 @@
           <p>Comprehensive REIWA-standard bond clean with a re-clean guarantee. Same-day bookings available for urgent vacates.</p>
           <div class="view-more">Learn more →</div>
         </div>
+        <div class="svc-card" onclick="showPage('house')">
+          <div class="svc-icon">✨</div>
+          <h3>House Cleaning Perth</h3>
+          <p>Regular or one-off residential house cleaning across all Perth suburbs — thorough, reliable, and eco-friendly.</p>
+          <div class="view-more">Learn more →</div>
+        </div>
+        <div class="svc-card" onclick="showPage('commercial')">
+          <div class="svc-icon">🏢</div>
+          <h3>Commercial Cleaning Perth</h3>
+          <p>Professional cleaning for Perth offices, retail spaces, and commercial properties — flexible scheduling available.</p>
+          <div class="view-more">Learn more →</div>
+        </div>
       </div>
 
       <h2 class="section-title" style="margin-bottom:10px;">Coming Soon</h2>
@@ -699,11 +715,6 @@
           <span class="coming-soon">Coming Soon</span>
         </div>
         <div class="svc-card inactive">
-          <h3>Weekly House Cleaning Perth</h3>
-          <p>Regular scheduled house cleaning — fortnightly or monthly, tailored to your lifestyle.</p>
-          <span class="coming-soon">Coming Soon</span>
-        </div>
-        <div class="svc-card inactive">
           <h3>Oven & BBQ Cleaning</h3>
           <p>Deep degrease and sanitise of ovens, BBQs, and grills — safe and thorough.</p>
           <span class="coming-soon">Coming Soon</span>
@@ -713,12 +724,213 @@
           <p>Remove dirt, oil stains, mould, and grime from driveways, paths, and outdoor surfaces.</p>
           <span class="coming-soon">Coming Soon</span>
         </div>
-        <div class="svc-card inactive">
-          <h3>Commercial Cleaning Perth</h3>
-          <p>Reliable cleaning for Perth offices, retail spaces, and commercial properties.</p>
-          <span class="coming-soon">Coming Soon</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ HOUSE CLEANING PAGE ═══════════════ -->
+<div class="page" id="page-house">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <div class="section-label">House Cleaning Perth</div>
+        <h1>Residential House Cleaning<br>Perth — Done Properly.</h1>
+        <p>Whether you need a one-off clean or a regular scheduled service, Perth Eco Clean Co. delivers thorough, eco-friendly house cleaning across all Perth suburbs. Reliable, transparent, and carried out to a consistent professional standard every time.</p>
+        <div style="margin-top:24px;display:flex;gap:14px;flex-wrap:wrap;">
+          <button class="btn-primary" onclick="showPage('quote')">Get a Free Quote</button>
+          <button class="btn-outline" onclick="showPage('contact')">Contact Us</button>
+        </div>
+        <div class="trust-bar" style="margin-top:22px;">
+          <div class="trust-item"><div class="check">✓</div> All Perth Suburbs</div>
+          <div class="trust-item"><div class="check">✓</div> Eco-Friendly Products</div>
+          <div class="trust-item"><div class="check">✓</div> One-Off or Regular</div>
+          <div class="trust-item"><div class="check">✓</div> Same-Day Bookings Available</div>
+          <div class="trust-item"><div class="check">✓</div> No Hidden Fees</div>
         </div>
       </div>
+      <div class="page-hero-icon">✨</div>
+    </div>
+  </div>
+
+  <!-- Who It's For -->
+  <div class="section">
+    <div class="container">
+      <div class="section-label">Who This Service Is For</div>
+      <h2 class="section-title">A Clean Home, Without the Effort</h2>
+      <p style="font-size:.95rem;color:var(--gray);line-height:1.8;max-width:720px;margin-bottom:32px;">Our house cleaning service is designed for Perth homeowners and residents who want their home maintained to a high standard — without the time or effort of doing it themselves. Whether it is a one-off deep clean before guests arrive or a regular fortnightly service, we treat every home with care and consistency.</p>
+
+      <div class="features-grid" style="margin-bottom:40px;">
+        <div class="feature-card">
+          <h4>One-Off House Clean</h4>
+          <p>A thorough clean of your home from top to bottom — ideal before a special event, after a renovation, or when things have built up and you need a fresh start.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Regular Scheduled Cleaning</h4>
+          <p>Set up a fortnightly or monthly cleaning schedule and we take care of the rest. Consistent, reliable, and always to the same standard.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Flexible Timing</h4>
+          <p>We work around your schedule. Early mornings, weekdays, and weekends are all available — just let us know what suits you.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Eco-Friendly by Default</h4>
+          <p>We use biodegradable, non-toxic products on every job — safe for children, pets, and Perth's environment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- What's Included -->
+  <div class="section" style="background:var(--off-white);">
+    <div class="container">
+      <div class="centered" style="margin-bottom:36px;">
+        <div class="section-label">What's Included</div>
+        <h2 class="section-title">What We Clean in Every House Service</h2>
+        <p class="section-desc">Our standard house clean covers all key living areas. Additional rooms and specific tasks can be discussed at the time of quoting.</p>
+      </div>
+      <div class="features-grid">
+        <div style="background:white;border-radius:16px;padding:26px;border:1px solid #e8f5e9;">
+          <h4 style="font-size:.85rem;font-weight:700;color:var(--green);letter-spacing:.05em;text-transform:uppercase;margin-bottom:14px;">Kitchen</h4>
+          <div class="check-item"><div class="check-dot">✓</div> Benchtops, splashback, and sink</div>
+          <div class="check-item"><div class="check-dot">✓</div> Stovetop and exterior of oven</div>
+          <div class="check-item"><div class="check-dot">✓</div> Cupboard exteriors wiped down</div>
+          <div class="check-item"><div class="check-dot">✓</div> Floor vacuumed and mopped</div>
+        </div>
+        <div style="background:white;border-radius:16px;padding:26px;border:1px solid #e8f5e9;">
+          <h4 style="font-size:.85rem;font-weight:700;color:var(--green);letter-spacing:.05em;text-transform:uppercase;margin-bottom:14px;">Bathrooms</h4>
+          <div class="check-item"><div class="check-dot">✓</div> Toilet, basin, bath, and shower</div>
+          <div class="check-item"><div class="check-dot">✓</div> Tiles and fixtures cleaned</div>
+          <div class="check-item"><div class="check-dot">✓</div> Mirrors polished</div>
+          <div class="check-item"><div class="check-dot">✓</div> Floor mopped</div>
+        </div>
+        <div style="background:white;border-radius:16px;padding:26px;border:1px solid #e8f5e9;">
+          <h4 style="font-size:.85rem;font-weight:700;color:var(--green);letter-spacing:.05em;text-transform:uppercase;margin-bottom:14px;">Bedrooms & Living Areas</h4>
+          <div class="check-item"><div class="check-dot">✓</div> Floors vacuumed and mopped</div>
+          <div class="check-item"><div class="check-dot">✓</div> Surfaces, shelves, and skirting boards wiped</div>
+          <div class="check-item"><div class="check-dot">✓</div> Light switches and door handles cleaned</div>
+          <div class="check-item"><div class="check-dot">✓</div> Window tracks and ledges wiped</div>
+        </div>
+        <div style="background:#fffbf0;border-radius:16px;padding:26px;border:1px solid #ffe082;">
+          <h4 style="font-size:.85rem;font-weight:700;color:#b45309;letter-spacing:.05em;text-transform:uppercase;margin-bottom:14px;">Optional Add-Ons</h4>
+          <div class="check-item" style="color:var(--gray);border-bottom-color:#fde8a0;">+ Interior oven deep clean</div>
+          <div class="check-item" style="color:var(--gray);border-bottom-color:#fde8a0;">+ Carpet steam cleaning</div>
+          <div class="check-item" style="color:var(--gray);border-bottom-color:#fde8a0;">+ Interior window cleaning</div>
+          <div class="check-item" style="color:var(--gray);border-bottom-color:transparent;">+ Laundry area cleaning</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="section">
+    <div class="container" style="max-width:640px;margin:0 auto;text-align:center;">
+      <div class="section-label">Get Started</div>
+      <h2 class="section-title">Ready to Book Your House Clean?</h2>
+      <p style="font-size:.95rem;color:var(--gray);line-height:1.8;margin-bottom:28px;">Tell us your suburb, property size, and how often you'd like us to clean. We'll send you a clear quote within 24 hours — no hidden fees, no pressure.</p>
+      <button class="btn-primary" style="padding:15px 36px;font-size:.95rem;" onclick="showPage('quote')">Get My Free Quote</button>
+      <p style="font-size:.85rem;color:var(--gray);margin-top:18px;">Or call us on <a href="tel:0400000000" style="color:var(--green);font-weight:600;">0400 000 000</a> — Mon to Sat, 7am to 6pm.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ COMMERCIAL CLEANING PAGE ═══════════════ -->
+<div class="page" id="page-commercial">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <div class="section-label">Commercial Cleaning Perth</div>
+        <h1>Commercial Cleaning Perth<br>— Reliable, Consistent, Professional.</h1>
+        <p>Perth Eco Clean Co. provides professional commercial cleaning for offices, retail spaces, medical suites, and business premises across all Perth suburbs. Flexible scheduling, eco-friendly products, and a consistent standard you can depend on.</p>
+        <div style="margin-top:24px;display:flex;gap:14px;flex-wrap:wrap;">
+          <button class="btn-primary" onclick="showPage('quote')">Get a Commercial Quote</button>
+          <button class="btn-outline" onclick="showPage('contact')">Contact Us</button>
+        </div>
+        <div class="trust-bar" style="margin-top:22px;">
+          <div class="trust-item"><div class="check">✓</div> All Perth Suburbs</div>
+          <div class="trust-item"><div class="check">✓</div> Eco-Friendly Products</div>
+          <div class="trust-item"><div class="check">✓</div> Flexible Scheduling</div>
+          <div class="trust-item"><div class="check">✓</div> After-Hours Available</div>
+          <div class="trust-item"><div class="check">✓</div> No Hidden Fees</div>
+        </div>
+      </div>
+      <div class="page-hero-icon">🏢</div>
+    </div>
+  </div>
+
+  <!-- Who It's For -->
+  <div class="section">
+    <div class="container">
+      <div class="section-label">Who We Work With</div>
+      <h2 class="section-title">Built Around Your Business Hours</h2>
+      <p style="font-size:.95rem;color:var(--gray);line-height:1.8;max-width:720px;margin-bottom:32px;">A clean, well-maintained workspace reflects on your business and matters to your staff, clients, and visitors. We provide dependable commercial cleaning across Perth — scheduled around your business hours so your operations are never disrupted.</p>
+
+      <div class="features-grid" style="margin-bottom:40px;">
+        <div class="feature-card">
+          <h4>Offices & Workplaces</h4>
+          <p>Regular cleaning of open-plan offices, meeting rooms, kitchens, bathrooms, and common areas — daily, weekly, or fortnightly.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Retail & Shopfronts</h4>
+          <p>Pre-opening or post-close cleaning for retail spaces — floors, surfaces, fitting rooms, and entry areas presented to a professional standard.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Medical & Professional Suites</h4>
+          <p>Thorough, hygienic cleaning for medical practices, consulting suites, and professional offices where standards and presentation matter.</p>
+        </div>
+        <div class="feature-card">
+          <h4>After-Hours & Early Morning</h4>
+          <p>We can schedule your clean before opening or after close — so your team arrives to a spotless workplace every day without any disruption.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- What's Included -->
+  <div class="section" style="background:var(--off-white);">
+    <div class="container">
+      <div class="centered" style="margin-bottom:36px;">
+        <div class="section-label">What's Included</div>
+        <h2 class="section-title">Our Standard Commercial Clean</h2>
+        <p class="section-desc">Every commercial cleaning service is tailored to your premises. The checklist below covers our standard scope — additional tasks are quoted clearly upfront.</p>
+      </div>
+      <div class="two-col" style="gap:24px;align-items:start;">
+        <div style="background:white;border-radius:16px;padding:28px;border:1px solid #e8f5e9;">
+          <h4 style="font-size:.85rem;font-weight:700;color:var(--green);letter-spacing:.05em;text-transform:uppercase;margin-bottom:14px;">Standard Scope</h4>
+          <div class="check-item"><div class="check-dot">✓</div> Vacuuming and mopping of all floor areas</div>
+          <div class="check-item"><div class="check-dot">✓</div> Desks, surfaces, and reception areas wiped</div>
+          <div class="check-item"><div class="check-dot">✓</div> Bathrooms and kitchenette fully cleaned</div>
+          <div class="check-item"><div class="check-dot">✓</div> Bins emptied and replaced</div>
+          <div class="check-item"><div class="check-dot">✓</div> Door handles, light switches, and high-touch points sanitised</div>
+          <div class="check-item"><div class="check-dot">✓</div> Glass partitions and entry doors cleaned</div>
+          <div class="check-item"><div class="check-dot">✓</div> Skirting boards and window ledges dusted</div>
+        </div>
+        <div>
+          <div style="background:white;border-radius:16px;padding:28px;border:1px solid #e8f5e9;margin-bottom:20px;">
+            <h4 style="font-size:.85rem;font-weight:700;color:var(--gray);letter-spacing:.05em;text-transform:uppercase;margin-bottom:14px;">Optional Add-Ons</h4>
+            <div class="check-item" style="color:var(--gray);">+ Carpet steam cleaning</div>
+            <div class="check-item" style="color:var(--gray);">+ Interior window cleaning</div>
+            <div class="check-item" style="color:var(--gray);">+ Kitchen deep clean</div>
+            <div class="check-item" style="color:var(--gray);border-bottom:none;">+ Pressure washing of entry areas</div>
+          </div>
+          <div style="background:var(--green);border-radius:16px;padding:26px;color:white;">
+            <h4 style="font-size:.95rem;font-weight:700;margin-bottom:10px;">Flexible Contracts</h4>
+            <p style="font-size:.85rem;opacity:.85;line-height:1.75;">We offer daily, weekly, and fortnightly commercial cleaning plans. No lock-in contracts — cancel or adjust your schedule at any time.</p>
+            <button onclick="showPage('quote')" style="background:white;color:var(--green);padding:11px 20px;border-radius:10px;font-weight:700;font-size:.85rem;border:none;cursor:pointer;margin-top:16px;width:100%;">Get a Commercial Quote →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="section">
+    <div class="container" style="max-width:640px;margin:0 auto;text-align:center;">
+      <div class="section-label">Get Started</div>
+      <h2 class="section-title">Let's Talk About Your Premises.</h2>
+      <p style="font-size:.95rem;color:var(--gray);line-height:1.8;margin-bottom:28px;">Tell us about your business, your premises size, and how often you need a clean. We'll put together a tailored quote within 24 hours — clear, itemised, and without pressure.</p>
+      <button class="btn-primary" style="padding:15px 36px;font-size:.95rem;" onclick="showPage('quote')">Get My Free Commercial Quote</button>
+      <p style="font-size:.85rem;color:var(--gray);margin-top:18px;">Or call us on <a href="tel:0400000000" style="color:var(--green);font-weight:600;">0400 000 000</a> — Mon to Sat, 7am to 6pm.</p>
     </div>
   </div>
 </div>
@@ -989,13 +1201,11 @@
     <div class="footer-col">
       <h4>Our Cleaning Services</h4>
       <ul>
-        <li><a onclick="showPage('bin')">Bin Cleaning Service Perth</a></li>
         <li><a onclick="showPage('bin')">Wheelie Bin Cleaning Perth</a></li>
         <li><a onclick="showPage('lease')">End of Lease Cleaning Perth</a></li>
         <li><a onclick="showPage('lease')">Bond Cleaning Perth</a></li>
-        <li><a onclick="showPage('lease')">Bond Back Cleaning Perth</a></li>
-        <li><a onclick="showPage('services')">House Cleaning Perth</a></li>
-        <li><a onclick="showPage('services')">Residential Cleaning Perth</a></li>
+        <li><a onclick="showPage('house')">House Cleaning Perth</a></li>
+        <li><a onclick="showPage('commercial')">Commercial Cleaning Perth</a></li>
         <li><a onclick="showPage('quote')">Get a Free Quote</a></li>
       </ul>
     </div>
@@ -1004,11 +1214,9 @@
       <ul>
         <li><a onclick="showPage('services')">Window Cleaning Perth</a></li>
         <li><a onclick="showPage('services')">Curtain Cleaning Perth</a></li>
-        <li><a onclick="showPage('services')">Weekly House Cleaning Perth</a></li>
         <li><a onclick="showPage('services')">Pressure Washing Perth</a></li>
         <li><a onclick="showPage('services')">Driveway Cleaning Perth</a></li>
         <li><a onclick="showPage('services')">Oven & BBQ Cleaning Perth</a></li>
-        <li><a onclick="showPage('services')">Commercial Cleaning Perth</a></li>
       </ul>
     </div>
   </div>
